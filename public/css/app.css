@@ -11102,6 +11102,7 @@ a.text-dark:focus {
 
 body {
   background-image: url("/images/wall.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -11113,6 +11114,7 @@ img {
 
 .logo {
   height: 70px;
+  width: auto;
 }
 
 .nav-link {
@@ -11131,6 +11133,65 @@ img {
 
 .bg-white {
   background-color: rgba(244, 240, 236, 0.7) !important;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+h5 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #866130;
+}
+
+.homepaper {
+  border: 1px solid #866130;
+}
+
+.paperwrite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #5f4523;
+  font-family: "Courier new";
+  font-style: oblique;
+  font-size: 300%;
+}
+
+.topatitraukimas {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.rudasfonas {
+  background-color: rgba(227, 217, 206, 0.7);
+}
+
+.ikona {
+  margin: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inrow {
+  align: center;
+}
+
+.ikonospav {
+  background-color: rgba(134, 97, 48, 0.5);
 }
 
 .btn-primary {
