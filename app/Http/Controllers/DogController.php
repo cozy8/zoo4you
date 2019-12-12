@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Dog;
 
 class DogController extends Controller
 {
@@ -35,7 +36,18 @@ class DogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dog = new Dog();
+        $dog->item_name = $request->input('title');
+        $dog->category = $request->input('category');
+        $dog->description = $request->input('description');
+        $dog->dimensions = $request->input('dimension');
+        $dog->quantity = $request->input('quantity');
+        $dog->price = $request->input('price');
+        $dog->photo = '.!.';
+
+        $dog->save();
+
+        return redirect('sabaka')->with('success', 'Prekė pridėta');
     }
 
     /**
@@ -82,4 +94,12 @@ class DogController extends Controller
     {
         //
     }
+
+
+
+
+
+
+
+
 }
