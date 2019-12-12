@@ -87,5 +87,14 @@
             @yield('content')
         </main>
     </div>
+    <footer class="rudasfonas">
+        <div class="aligncenter">
+            
+                <div style="font-size: 20px;"> Kontaktai: </div>
+                Susisiekite su mumis! <br>
+                ZOOforYou@gmail.com <br>
+                Tel: 868686868
+        </div>
+    </footer>
 </body>
 </html>
