@@ -16,3 +16,4 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::resource('sabaka', 'DogController');
+Route::resource('skelbimai', 'BlogController');
