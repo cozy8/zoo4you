@@ -58,7 +58,16 @@ class DogController extends Controller
      */
     public function show($id)
     {
-        //
+        $dog = Dog::find($id);
+        return view('dog.show')->with('dog', $dog);
+    }
+
+
+    public function showByCategory(Request $request)
+    {
+        $dogs = Dog::where('category', $request->input('category'));
+
+        return view('dog.category')->with('dogs', $dogs);
     }
 
     /**
