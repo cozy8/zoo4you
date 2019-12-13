@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class= "rudasfonas">
-                <div class="topatitraukimas">
+                <div class="topatitraukimasnav">
                     <img src="/images/img/home/9.jpg" alt="">
                 </div>
                 <div class="topatitraukimas">
