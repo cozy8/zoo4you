@@ -11128,16 +11128,28 @@ img {
 
 .navbar {
   height: 80px;
-  position: relative;
   z-index: 10;
   position: fixed;
   width: 100%;
 }
 
+.topatitraukimasnav {
+  margin-top: 70px;
+}
+
+.container {
+  min-height: 100%;
+  position: relative;
+}
+
 footer {
+  position: absolute;
   padding-top: 10px;
   height: 120px;
   font-size: 15px;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .nav-item {
