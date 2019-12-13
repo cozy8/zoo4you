@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Dog;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -57,7 +58,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+
     }
 
     /**
