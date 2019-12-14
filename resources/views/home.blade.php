@@ -20,14 +20,13 @@
         <div class="topatitraukimas">    
             <div class="row">
                             <div class="col-md-3 ikona">
-                                <a href="">
+                                <a href="/sabaka">
                                 <div class="ikonospav">
                                     <img src="/images/img/button/2.png" alt="">
                                 </div>
                                 <div>
                                     <h5>Šunims</h5>
                                 </div>
-                                </a>
                                 </a>
                             </div>
                             <div class="col-md-3 ikona">
@@ -122,7 +121,7 @@
                     <div class="row">
                         <div class="col-md-3">
                         <a href="">
-                            <div class="skelbimopav">
+                            <div >
                                 <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt=""> </a>
                             </div>
                         </div>
@@ -147,6 +146,7 @@
                     </div>
                 </div>
 
+                
                 <div class="topatitraukimas">
                     <div class="row ">
                         <div class="col-md-3">
@@ -175,6 +175,7 @@
 
                     </div>
                 </div>
+
 
                 <div class="topatitraukimas">
                     <div class="row">

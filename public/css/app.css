@@ -11104,11 +11104,17 @@ a.text-dark:focus {
   text-align: center;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background-image: url("/images/wall.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0 0 120px;
 }
 
 img {
@@ -11121,6 +11127,10 @@ img {
   width: auto;
 }
 
+.nav-item {
+  font-family: "Nunito", sans-serif;
+}
+
 .nav-link {
   color: rgba(0, 0, 0, 0.8) !important;
   font-size: 15px;
@@ -11131,6 +11141,43 @@ img {
   z-index: 10;
   position: fixed;
   width: 100%;
+}
+
+.dropbtn {
+  background: none;
+  padding: 8px;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .topatitraukimasnav {
@@ -11150,6 +11197,7 @@ footer {
   bottom: 0;
   width: 100%;
   overflow: hidden;
+  left: 0;
 }
 
 .nav-item {
@@ -11188,21 +11236,86 @@ a:hover {
   color: #866130;
 }
 
+.removepadding {
+  padding: 0;
+}
+
 .skelbimopav {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.homepaper {
-  border-bottom: 0.5px solid rgba(95, 69, 35, 0.7);
-  border-top: 0.5px solid rgba(95, 69, 35, 0.7);
-}
-
 .skelbimas {
   height: 100%;
   width: 100%;
   padding-left: 2%;
+  border-bottom: 0.5px solid rgba(95, 69, 35, 0.7);
+  border-top: 0.5px solid rgba(95, 69, 35, 0.7);
+}
+
+.produktopav {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.produktas {
+  width: 100%;
+  height: 75%;
+  padding-left: 5%;
+  font-size: 18px;
+  position: relative;
+  border-bottom: 0.5px solid rgba(95, 69, 35, 0.7);
+  border-top: 0.5px solid rgba(95, 69, 35, 0.7);
+}
+
+.cartimgprekes {
+  height: 20px;
+  width: auto;
+  text-align: center;
+}
+
+.categorytitle {
+  font-size: 14px;
+  color: #5f4523;
+}
+
+.sellrow {
+  padding: 0;
+  height: 30px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+@media only screen and (min-width: 768px) {
+  .produktas {
+    position: relative;
+  }
+
+  .sellrowapacioje {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.rudasfonas.sellrow {
+  text-align: center;
+  border: 1px solid rgba(95, 69, 35, 0.7);
+}
+
+.cartimg {
+  height: 100%;
+  width: auto;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.homepaper {
   border-bottom: 0.5px solid rgba(95, 69, 35, 0.7);
   border-top: 0.5px solid rgba(95, 69, 35, 0.7);
 }
@@ -11253,11 +11366,15 @@ a:hover {
   display: inline-block;
 }
 
-.inrow {
-  align: center;
+.ikonospav {
+  background-color: rgba(134, 97, 48, 0.5);
 }
 
-.ikonospav {
+.skelbimoikona {
+  width: 100%;
+  height: 144.156px;
+  -o-object-fit: cover;
+     object-fit: cover;
   background-color: rgba(134, 97, 48, 0.5);
 }
 

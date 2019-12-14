@@ -28,6 +28,7 @@
                     <div class="form-group">
                         {{Form::label('photo', 'Nuotrauka')}}
                         {{Form::file('photo')}}
+
                     </div>
                     <div class="form-group">
                         {{Form::label('price', 'Kaina')}}
@@ -45,4 +46,9 @@
     {!! Form::close() !!}
 
 
+
 @endsection
+
+<?php
+
+?>
