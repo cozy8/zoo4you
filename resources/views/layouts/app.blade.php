@@ -34,13 +34,24 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Pradžia') }}</a> <!-- pakeisti route -->
+                                <a class="nav-link" href="/" >{{ __('Pradžia') }}</a> <!-- pakeisti route -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Prekės') }}</a> <!-- pakeisti route -->
+                                <div class="dropdown">
+                                    <button class="dropbtn">Prekės</button>
+                                    <div class="dropdown-content">
+                                        <a href="/sabaka">Šunims</a>
+                                        <a href="#">Katėms</a>
+                                        <a href="#">Graužikams</a>
+                                        <a href="#">Žuvims</a>
+                                        <a href="#">Reptiliams</a>
+                                        <a href="#">Paukščiams</a>
+                                    </div>
+                                </div>
+                                <!--<a class="nav-link"  href="{{ route('login') }}">{{ __('Prekės') }}</a>  pakeisti route -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Skelbimų lenta') }}</a> <!-- pakeisti route -->
+                                <a class="nav-link" href="/skelbimai" >{{ __('Skelbimų lenta') }}</a> <!-- pakeisti route -->
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Pagalba') }}</a> <!-- pakeisti route -->
