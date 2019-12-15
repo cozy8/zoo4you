@@ -32,11 +32,13 @@
                     <div class="aligncenter">{{Form::submit('Pakeisti prekę', ['class' => 'btn btn-primary'])}}</div>
                     {!! Form::close() !!}
                 </div>
+                @auth()
                 @if(Auth::user()->admin == 1)
                     {{Form::open(['method'  => 'DELETE', 'action' => ['DogController@destroy', $dog->id]])}}
                     {{Form::button('Trinti prekę', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
                     {!! Form::close() !!}
                 @endif
+                @endauth
             </div>
         </div>
     </div>

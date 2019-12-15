@@ -12,9 +12,11 @@
                             <h2> {{$dog->item_name}} </h2>
                 </div>
             </div>
+            @auth()
             @if(Auth::user()->admin == 1)
                 <a class="btn btn-primary" href="/sunys/{{$dog->id}}/edit">Keisti prekę</a>
             @endif
+            @endauth
 
                 <div class="topatitraukimasdidelis">
                     <div class="row">
