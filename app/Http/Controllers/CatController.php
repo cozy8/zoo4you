@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Help;
+use App\Cat;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HelpController extends Controller
+class CatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class HelpController extends Controller
      */
     public function index()
     {
-        //
+        return view('cat.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class HelpController extends Controller
      */
     public function create()
     {
-        //
+        return view('cat.create');
     }
 
     /**
@@ -36,37 +36,45 @@ class HelpController extends Controller
      */
     public function store(Request $request)
     {
-        $help = new Help();
-        $help->email = $request->input('email');
-        $help->message = $request->input('message');
-        $help->user_id = '1';
+        $cat = new Cat();
+        $cat->item_name = $request->input('title');
+        $cat->category = $request->input('category');
+        $cat->description = $request->input('description');
+        $cat->dimensions = $request->input('dimension');
+        $cat->quantity = $request->input('quantity');
+        $cat->price = $request->input('price');
+        $cat->photo = '.!.';
 
+        $cat->save();
 
-        $help->save();
-
-        return redirect('/')->with('success', 'Laiškas išsiųstas');
+        return redirect('kates')->with('success', 'Prekė pridėta');
     }
 
     /**
      * Display the specified resource.
      *
-     *
-
-     * @param  \App\Help  $help
+     * @param  \App\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function show(Help $help)
+    public function show(Cat $cat)
     {
-        //
+        return view('cat.show')->with('cat', $cat);
     }
 
+
+    public function category(Request $request)
+    {
+        $dogs = Cat::where('category', $request->input('category'))->get();
+
+        return view('cat.category')->with('cats', $cats);
+    }
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Help  $help
+     * @param  \App\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function edit(Help $help)
+    public function edit(Cat $cat)
     {
         //
     }
@@ -75,10 +83,10 @@ class HelpController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Help  $help
+     * @param  \App\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Help $help)
+    public function update(Request $request, Cat $cat)
     {
         //
     }
@@ -86,10 +94,10 @@ class HelpController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Help  $help
+     * @param  \App\Cat  $cat
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Help $help)
+    public function destroy(Cat $cat)
     {
         //
     }

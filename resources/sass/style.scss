@@ -91,6 +91,10 @@ footer{
 .nav-item{
     padding-left: 20px;
 }
+.navbar-collapse.collapse.show{
+    background-color: rgba(227, 217, 206);
+}
+
 .bg-white {
     background-color: rgba(244, 240, 236, 0.7) !important; //NAVBAR BACKGROUND SPALVA
   }
@@ -400,5 +404,8 @@ border: none;
           }
           .mainmargin{
             margin-bottom: 0px;
+        }
+        .nav-item{
+            border-bottom: 1px solid rgb(95, 69, 35);
         }
         }
