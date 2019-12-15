@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Cat;
+use App\Rodent;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CatController extends Controller
+class RodentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CatController extends Controller
      */
     public function index()
     {
-        return view('cat.index');
+        return view('rodent.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class CatController extends Controller
      */
     public function create()
     {
-        return view('cat.create');
+        return view('rodent.create');
     }
 
     /**
@@ -36,7 +36,6 @@ class CatController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
             'title' => 'required',
             'category' => 'required',
@@ -46,37 +45,38 @@ class CatController extends Controller
             'quantity' => 'required',
         ]);
 
-        $cat = new Cat();
-        $cat->item_name = $request->input('title');
-        $cat->category = $request->input('category');
-        $cat->description = $request->input('description');
-        $cat->dimensions = $request->input('dimension');
-        $cat->quantity = $request->input('quantity');
-        $cat->price = $request->input('price');
+        $rodent = new Rodent();
+        $rodent->item_name = $request->input('title');
+        $rodent->category = $request->input('category');
+        $rodent->description = $request->input('description');
+        $rodent->dimensions = $request->input('dimension');
+        $rodent->quantity = $request->input('quantity');
+        $rodent->price = $request->input('price');
+        $rodent->photo = '.!.';
 
-        $cat->save();
+        $rodent->save();
 
-        return redirect('kates')->with('success', 'Prekė pridėta');
+        return redirect('/peles')->with('success', 'Prekė pridėta');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cat  $cat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $cat = Cat::find($id);
-        return view('cat.show')->with('cat', $cat);
-    }
+        $rodent = Rodent::find($id);
 
+        return view('rodent.show')->with('rodent', $rodent);
+    }
 
     public function category(Request $request)
     {
-        $cats = Cat::where('category', $request->input('category'))->get();
+        $rodents = Rodent::where('category', $request->input('category'))->get();
 
-        return view('cat.category')->with('cats', $cats);
+        return view('rodent.category')->with('rodents', $rodents);
     }
     /**
      * Show the form for editing the specified resource.
@@ -86,19 +86,19 @@ class CatController extends Controller
      */
     public function edit($id)
     {
-        $cat = Cat::find($id);
+        $rodent = Rodent::find($id);
 
-        return view('cat.edit')->with('cat', $cat);
+        return view('rodent.edit')->with('rodent', $rodent);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cat  $cat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cat $cat)
+    public function update(Request $request, Rodent $rodent)
     {
         $this->validate($request, [
             'title' => 'required',
@@ -109,30 +109,31 @@ class CatController extends Controller
             'quantity' => 'required',
         ]);
 
-        $cat = new Cat();
-        $cat->item_name = $request->input('title');
-        $cat->category = $request->input('category');
-        $cat->description = $request->input('description');
-        $cat->dimensions = $request->input('dimension');
-        $cat->quantity = $request->input('quantity');
-        $cat->price = $request->input('price');
+        $rodent = new Rodent();
+        $rodent->item_name = $request->input('title');
+        $rodent->category = $request->input('category');
+        $rodent->description = $request->input('description');
+        $rodent->dimensions = $request->input('dimension');
+        $rodent->quantity = $request->input('quantity');
+        $rodent->price = $request->input('price');
+        $rodent->photo = '.!.';
 
-        $cat->save();
+        $rodent->save();
 
-        return redirect('kates')->with('success', 'Prekė pakeista');
+        return redirect('/peles')->with('success', 'Prekė pakeista');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Rodent  $rodent
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $cat = Cat::find($id);
-        $cat->delete();
+        $rodent = Rodent::find($id);
+        $rodent->delete();
 
-        return redirect()->back()->with('danger', 'kate buvo panaikinta');
+        return redirect()->back()->with('danger', 'peliukas buvo panaikintas');
     }
 }

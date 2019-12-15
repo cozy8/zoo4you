@@ -9,7 +9,7 @@
 
             <div class= "rudasfonas">
                 <div class="topatitraukimas">
-                            <h2> {{$cat->item_name}} </h2>
+                            <h2> {{$rodent->item_name}} </h2>
                 </div>
             </div>
 
@@ -27,8 +27,8 @@
                             </h5>
                             <div class="rudasfonas produktas">
                                 <div class="col-md-12 topatitraukimas ">
-                                    <p class="categorytitle">{{$cat->category}} </p>
-                                    <p class="topatitraukimas">{{$cat->description}} </p>
+                                    <p class="categorytitle">{{$rodent->category}} </p>
+                                    <p class="topatitraukimas">{{$rodent->description}} </p>
                                 </div>
                             </div>
 
@@ -48,8 +48,8 @@
                                     </div>
 
                                     <div class="row">
-                                            <div class="col-md-2 rudasfonas sellrow"> <p>{{$cat->price}} </p> </div>
-                                            <div class="col-md-5 rudasfonas  sellrow"> <p>{{$cat->dimensions}} </p> </div>
+                                            <div class="col-md-2 rudasfonas sellrow"> <p>{{$rodent->price}} </p> </div>
+                                            <div class="col-md-5 rudasfonas  sellrow"> <p>{{$rodent->dimensions}} </p> </div>
                                             <div class="col-md-2 sellrow"> <input style="width: 100%;" type="number" name="quantity" min="1" max="5"> </div>
                                             <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
                                     </div>
@@ -57,16 +57,12 @@
 
                                 <div class="mobile">
                                     <div class="row">
-                                            <div class="col-md-2 rudasfonas sellrow"> <p> Kaina: {{$cat->price}} </p> </div>
-                                            <div class="col-md-5 rudasfonas  sellrow"> <p> Išmatavimai:{{$cat->dimensions}} </p> </div>
+                                            <div class="col-md-2 rudasfonas sellrow"> <p> Kaina: {{$rodent->price}} </p> </div>
+                                            <div class="col-md-5 rudasfonas  sellrow"> <p> Išmatavimai:{{$rodent->dimensions}} </p> </div>
                                             <div class="col-md-2 rudasfonas sellrow">  <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5"> </div>
                                             <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
                                     </div>
                                 </div>
-                                            <!--<p>skelbimo data</p>
-                                            <p>Miestas</p>
-                                            <p>Peržiūros</p>
-                                            <p>Kaina</p>-->
 
                         </div>
                     </div>

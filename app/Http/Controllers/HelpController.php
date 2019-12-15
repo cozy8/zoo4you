@@ -36,6 +36,13 @@ class HelpController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate($request, [
+            'email' => 'required',
+            'message' => 'required',
+
+        ]);
+
         $help = new Help();
         $help->email = $request->input('email');
         $help->message = $request->input('message');

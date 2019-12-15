@@ -133,7 +133,7 @@ class DogController extends Controller
         $dog = Dog::find($id);
         $dog->delete();
 
-        return redirect()->back()->with('danger', 'sabaka išnyko');
+        return redirect()->back()->with('danger', 'suo buvo panaikintas');
     }
 
 

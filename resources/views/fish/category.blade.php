@@ -13,19 +13,19 @@
                             </div>
                     </div>
 
-@foreach($cats->chunk(3) as $chunk)
+@foreach($fishes->chunk(3) as $chunk)
     <div class="row topatitraukimas">
-        @foreach($chunk as $catter)
+        @foreach($chunk as $fisher)
             <div class="col-md-4">
 
                     <div class="card">
                             <img class="cardphoto" src="/images/img/skelbimai/2.jpg" alt="" style="width:100%">
                             <div class="cardcontainer">
-                                <h5><b>{{$catter->item_name}}</b></h5>
-                                <p>Išmatavimai: {{$catter->dimensions}} </p>
-                                <p style="height: 44.8px;">{{ str_limit($catter->description, 30) }} </p>
-                                <p>Kaina: {{$catter->price}} </p>
-                                <a href="/kates/{{$catter->id}}"> <p>  plačiau apie produktą... </p> </a>
+                                <h5><b>{{$fisher->item_name}}</b></h5>
+                                <p>Išmatavimai: {{$fisher->dimensions}} </p>
+                                <p style="height: 44.8px;">{{ str_limit($fisher->description, 30) }} </p>
+                                <p>Kaina: {{$fisher->price}} </p>
+                                <a href="/zuvys/{{$fisher->id}}"> <p>  plačiau apie produktą... </p> </a>
                                 <div class="">
                                     <div class = "row topatitraukimasdidelis justify-content-center">
                                         <div class="col-md-3">
