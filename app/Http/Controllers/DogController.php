@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Dog;
+use Illuminate\Support\Facades\Auth;
 
 class DogController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index', 'show', 'category');
+    }
+
+
     /**
      * Display a listing of the resource.
      *

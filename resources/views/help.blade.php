@@ -16,9 +16,16 @@
                     </div>
 
                     <div class="topatitraukimas">
+                        @auth()
+                        <div class="form-group none">
+                            {{Form::text('email', $user->email, ['class' => 'form-control', 'placeholder' => 'Jūsų e-mail adresas'])}}
+                        </div>
+                        @endauth
+                        @guest()
                         <div class="form-group">
                             {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Jūsų e-mail adresas'])}}
                         </div>
+                        @endguest
                         <div class="form-group">
                             {{Form::label('message', 'Pranešimas')}}
                             {{Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Aprašykite problemą, su kuria susidūrėte'])}}

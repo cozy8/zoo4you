@@ -11504,6 +11504,10 @@ p {
   background: #E74B37;
 }
 
+.none {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .produktas {
     position: relative;

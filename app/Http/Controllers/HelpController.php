@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Help;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HelpController extends Controller
 {
@@ -15,6 +17,15 @@ class HelpController extends Controller
      */
     public function index()
     {
+        if(Auth::check())
+        {
+            $id = Auth::id();
+
+            $alah = User::find($id);
+
+            return view('help')->with('user', $alah);
+        }
+
         return view('help');
     }
 
