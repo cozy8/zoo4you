@@ -25,7 +25,7 @@
                                 <p>Išmatavimai: {{$birder->dimensions}} </p>
                                 <p style="height: 44.8px;">{{ str_limit($birder->description, 30) }} </p>
                                 <p>Kaina: {{$birder->price}} </p>
-                                <a href="/peles/{{$birder->id}}"> <p>  plačiau apie produktą... </p> </a>
+                                <a href="/pauksciai/{{$birder->id}}"> <p>  plačiau apie produktą... </p> </a>
                                 <div class="">
                                     <div class = "row topatitraukimasdidelis justify-content-center">
                                         <div class="col-md-3">

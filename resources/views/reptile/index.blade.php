@@ -13,11 +13,15 @@
                 </div>
             </div>
 
-                    @auth()
+
+            <div class="aligncenter topatitraukimas">
+                @auth()
                     @if(Auth::user()->admin == 1)
                     <a class="btn btn-primary" href="/ropliai/create">Sukurti prekę</a>
                     @endif
-                    @endauth
+                @endauth
+            </div>
+
 
                 <div class="rudasfonas">
                     <div class="row">

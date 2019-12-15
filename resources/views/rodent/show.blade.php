@@ -66,6 +66,15 @@
 
                         </div>
                     </div>
+                </div>
+            </div>
+                    <div class="aligncenter topatitraukimas">
+                        @auth()
+                            @if(Auth::user()->admin == 1)
+                                <a class="btn btn-primary" href="/peles/{{$rodent->id}}/edit">Keisti prekę</a>
+                            @endif
+                        @endauth
+                    </div>
 
 
         </div>

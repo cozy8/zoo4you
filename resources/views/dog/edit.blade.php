@@ -9,6 +9,16 @@
             <div class="col-md-9">
                 <div class="topatitraukimasnav">
 
+                <div class="alignright">
+                    @auth()
+                    @if(Auth::user()->admin == 1)
+                        {{Form::open(['method'  => 'DELETE', 'action' => ['DogController@destroy', $dog->id]])}}
+                        {{Form::button('Trinti prekę', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
+                        {!! Form::close() !!}
+                    @endif
+                    @endauth
+                </div>
+
                     <div class="form-group">
                         {{Form::label('title', 'Prekės pavadinimas')}}
                         {{Form::text('title', $dog->item_name, ['class' => 'form-control', 'placeholder' => 'Prekės pavadinimas'])}}
@@ -32,13 +42,9 @@
                     <div class="aligncenter">{{Form::submit('Pakeisti prekę', ['class' => 'btn btn-primary'])}}</div>
                     {!! Form::close() !!}
                 </div>
-                @auth()
-                @if(Auth::user()->admin == 1)
-                    {{Form::open(['method'  => 'DELETE', 'action' => ['DogController@destroy', $dog->id]])}}
-                    {{Form::button('Trinti prekę', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
-                    {!! Form::close() !!}
-                @endif
-                @endauth
+
+
+
             </div>
         </div>
     </div>

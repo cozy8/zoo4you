@@ -10,15 +10,18 @@
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės Paukščiams</h2>
-                    <a href="/pauksciai/1">pelė</a>
                 </div>
             </div>
 
+
+                <div class="aligncenter topatitraukimas">
                     @auth()
                     @if(Auth::user()->admin == 1)
                     <a class="btn btn-primary" href="/pauksciai/create">Sukurti prekę</a>
                     @endif
                     @endauth
+                </div>
+
 
                 <div class="rudasfonas">
                     <div class="row">
