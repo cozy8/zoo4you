@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class CatController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware('admin')->except('index', 'show', 'category');
+    }
+
+
     /**
      * Display a listing of the resource.
      *

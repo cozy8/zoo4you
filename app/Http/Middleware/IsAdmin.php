@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class IsAdmin
 {
@@ -19,6 +20,6 @@ class IsAdmin
             return $next($request);
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('error', 'you dont belong there peasant');
     }
 }
