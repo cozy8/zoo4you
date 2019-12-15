@@ -22,8 +22,8 @@
                         {{Form::textarea('description', '', ['class' => 'form-control', 'placeholder' => 'Aprašymas'])}}
                     </div>
                     <div class="form-group">
-                        {{Form::label('dimension', 'Dimensijos')}}
-                        {{Form::text('dimension', '', ['class' => 'form-control', 'placeholder' => 'Dimensijos'])}}
+                        {{Form::label('dimension', 'Dydis')}}
+                        {{Form::text('dimension', '', ['class' => 'form-control', 'placeholder' => 'Dydis'])}}
                     </div>
                     <div class="form-group">
                         {{Form::label('photo', 'Nuotrauka')}}
