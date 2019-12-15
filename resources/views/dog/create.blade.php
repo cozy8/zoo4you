@@ -4,7 +4,7 @@
 
     {!! Form::open(['action' => 'DogController@store', 'files' => true]) !!}
 
-    <div class="container">
+    <div class="container mainmargin">
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <div class="topatitraukimasnav">
@@ -37,14 +37,14 @@
                         {{Form::label('price', 'Kaina')}}
                         {{Form::number('price', '', ['class' => 'form-control', 'placeholder' => 'Kaina', 'step' => '0.01'])}}
                     </div>
-                    
+                    <div class="aligncenter">{{Form::submit('Pridėti prekę', ['class' => 'btn btn-primary'])}}</div>
                 </div>
             </div>
         </div>
     </div>
-    
 
-<div class="aligncenter">{{Form::submit('Pridėti prekę', ['class' => 'btn btn-primary'])}}</div>
+
+
 {!! Form::close() !!}
 
 

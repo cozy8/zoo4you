@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Help;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Dog;
 
-class DogController extends Controller
+class HelpController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class DogController extends Controller
      */
     public function index()
     {
-        return view('dog.index');
+        //
     }
 
     /**
@@ -25,7 +25,7 @@ class DogController extends Controller
      */
     public function create()
     {
-        return view('dog.create');
+        //
     }
 
     /**
@@ -36,48 +36,27 @@ class DogController extends Controller
      */
     public function store(Request $request)
     {
-        $dog = new Dog();
-        $dog->item_name = $request->input('title');
-        $dog->category = $request->input('category');
-        $dog->description = $request->input('description');
-        $dog->dimensions = $request->input('dimension');
-        $dog->quantity = $request->input('quantity');
-        $dog->price = $request->input('price');
-        $dog->photo = '.!.';
-
-        $dog->save();
-
-        return redirect('sunys')->with('success', 'Prekė pridėta');
+        return 0;
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Help $help)
     {
-        $dog = Dog::find($id);
-
-        return view('dog.show')->with('dog', $dog);
-    }
-
-
-    public function category(Request $request)
-    {
-        $dogs = Dog::where('category', $request->input('category'))->get();
-
-        return view('dog.category')->with('dogs', $dogs);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Help $help)
     {
         //
     }
@@ -86,10 +65,10 @@ class DogController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Help $help)
     {
         //
     }
@@ -97,19 +76,11 @@ class DogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Help  $help
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Help $help)
     {
         //
     }
-
-
-
-
-
-
-
-
 }

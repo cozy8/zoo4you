@@ -40,7 +40,7 @@
                                 <div class="dropdown">
                                     <button class="dropbtn">Prekės</button>
                                     <div class="dropdown-content">
-                                        <a href="/sabaka">Šunims</a>
+                                        <a href="/sunys">Šunims</a>
                                         <a href="#">Katėms</a>
                                         <a href="#">Graužikams</a>
                                         <a href="#">Žuvims</a>
@@ -54,7 +54,7 @@
                                 <a class="nav-link" href="/skelbimai" >{{ __('Skelbimų lenta') }}</a> <!-- pakeisti route -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Pagalba') }}</a> <!-- pakeisti route -->
+                                <a class="nav-link" href="/pagalba">{{ __('Pagalba') }}</a> <!-- pakeisti route -->
                             </li>
                     </ul>
 

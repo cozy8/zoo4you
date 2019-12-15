@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mainmargin">
     <div class="row justify-content-center">
         <div class="col-md-11 topatitraukimasnav">
             <div class= "rudasfonas">
@@ -140,7 +140,7 @@
                                 <img class="skelbimopav" src="/images/img/skelbimai/1.jpg" alt=""> </a>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-9 ">
                             <div class="rudasfonas skelbimas">
                                 <div class="row">
@@ -169,7 +169,7 @@
                                 <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt=""> </a>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-9 ">
                             <div class="rudasfonas skelbimas">
                                 <div class="row">
@@ -198,7 +198,7 @@
                                 <img class="skelbimopav" src="/images/img/skelbimai/3.jpg" alt=""> </a>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-9 ">
                             <div class="rudasfonas skelbimas">
                                 <div class="row">
