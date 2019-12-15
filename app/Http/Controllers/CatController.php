@@ -64,7 +64,7 @@ class CatController extends Controller
 
     public function category(Request $request)
     {
-        $dogs = Cat::where('category', $request->input('category'))->get();
+        $cats = Cat::where('category', $request->input('category'))->get();
 
         return view('cat.category')->with('cats', $cats);
     }
