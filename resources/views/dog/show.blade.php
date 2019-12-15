@@ -12,6 +12,9 @@
                             <h2> {{$dog->item_name}} </h2>
                 </div>
             </div>
+            @if(Auth::user()->admin == 1)
+                <a class="btn btn-primary" href="/sunys/{{$dog->id}}/edit">Keisti prekę</a>
+            @endif
 
                 <div class="topatitraukimasdidelis">
                     <div class="row">
@@ -63,25 +66,14 @@
                                             <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
                                     </div>
                                 </div>
-                                            <!--<p>skelbimo data</p>
-                                            <p>Miestas</p>
-                                            <p>Peržiūros</p>
-                                            <p>Kaina</p>-->
-
                         </div>
                     </div>
-
-
-           <!-- <p>{{$dog->item_name}} </p>
-            <p>{{$dog->category}} </p>
-            <p>{{$dog->description}} </p>
-            <p>{{$dog->dimensions}} </p>
-            <p>{{$dog->quantity}} </p>
-            <p>{{$dog->price}} </p> -->
-
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 
 

@@ -10,7 +10,10 @@
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės šunims</h2>
-                    <a href="/sunys/1">SABAKA</a>
+
+                    @if(Auth::user()->admin == 1)
+                    <a class="btn btn-primary" href="/sunys/create">Sukurti prekę</a>
+                    @endif
                 </div>
             </div>
                 <div class="rudasfonas">

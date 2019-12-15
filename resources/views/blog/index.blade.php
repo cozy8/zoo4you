@@ -77,7 +77,6 @@
                                     <h5>Klaidžioja</h5>
                                 </div>
                                 </a>
-                                </a>
                             </div>
                             <div class="col-md-2 ikona">
                             <a href="">
