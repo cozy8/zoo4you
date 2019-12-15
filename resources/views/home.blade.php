@@ -30,7 +30,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 ikona">
-                            <a href="">
+                            <a href="/kates">
                                 <div class="ikonospav">
                                     <img src="/images/img/button/1.png" alt="">
                                 </div>
@@ -53,7 +53,7 @@
 
                     <div class="row">
                         <div class="col-md-3 ikona">
-                        <a href="">
+                        <a href="/zuvys">
                             <div class="ikonospav">
                                 <img src="/images/img/button/3.png" alt="">
                             </div>

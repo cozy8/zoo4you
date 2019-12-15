@@ -2,7 +2,7 @@
 
 @section('content')
 
-    {!! Form::open(['action' => 'CatController@store', 'files' => true]) !!}
+    {!! Form::open(['action' => 'FishController@store', 'files' => true]) !!}
 
     <div class="container mainmargin">
         <div class="row justify-content-center">
@@ -15,7 +15,7 @@
                     </div>
                     <div class="form-group">
                         {{Form::label('category', 'Prekės kategorija')}}
-                        {{Form::select('category', ['pets' => 'Gyvūnėliai', 'foods' => 'Maistas','toilets' => 'Tualetai','toys' => 'Žaislai','akse' => 'Aksesuarai','beds' => 'Guoliai'], ['class' => 'form-control'])}}
+                        {{Form::select('category', ['pets' => 'Žuvys', 'foods' => 'Maistas','house' => 'Akvariumai'], ['class' => 'form-control'])}}
                     </div>
                     <div class="form-group">
                         {{Form::label('description', 'Aprašymas')}}

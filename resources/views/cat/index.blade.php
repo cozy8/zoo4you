@@ -6,11 +6,11 @@
         <div class="col-md-9">
             <div class= "rudasfonas">
                 <div class="topatitraukimasnav">
-                    <img src="/images/img/home/9.jpg" alt="">
+                    <img src="/images/img/home/ph/8.jpg" alt="">
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės katėms</h2>
-                    <a href="/kates/1">SABAKA</a>
+                    <a href="/kates/1">kate</a>
                 </div>
             </div>
                 <div class="rudasfonas">

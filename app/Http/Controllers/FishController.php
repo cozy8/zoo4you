@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Cat;
+use App\Fish;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CatController extends Controller
+class FishController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CatController extends Controller
      */
     public function index()
     {
-        return view('cat.index');
+        return view('fish.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class CatController extends Controller
      */
     public function create()
     {
-        return view('cat.create');
+        return view('fish.create');
     }
 
     /**
@@ -36,7 +36,6 @@ class CatController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
             'title' => 'required',
             'category' => 'required',
@@ -46,38 +45,40 @@ class CatController extends Controller
             'quantity' => 'required',
         ]);
 
-        $cat = new Cat();
-        $cat->item_name = $request->input('title');
-        $cat->category = $request->input('category');
-        $cat->description = $request->input('description');
-        $cat->dimensions = $request->input('dimension');
-        $cat->quantity = $request->input('quantity');
-        $cat->price = $request->input('price');
+        $fish = new Fish();
+        $fish->item_name = $request->input('title');
+        $fish->category = $request->input('category');
+        $fish->description = $request->input('description');
+        $fish->dimensions = $request->input('dimension');
+        $fish->quantity = $request->input('quantity');
+        $fish->price = $request->input('price');
 
-        $cat->save();
+        $fish->save();
 
-        return redirect('kates')->with('success', 'Prekė pridėta');
+        return redirect('zuvys')->with('success', 'Prekė pridėta');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Cat  $cat
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $cat = Cat::find($id);
-        return view('cat.show')->with('cat', $cat);
+        $fish = Fish::find($id);
+
+        return view('fish.show')->with('fish', $fish);
     }
 
 
     public function category(Request $request)
     {
-        $cats = Cat::where('category', $request->input('category'))->get();
+        $fishes = Fish::where('category', $request->input('category'))->get();
 
-        return view('cat.category')->with('cats', $cats);
+        return view('fish.category')->with('fishes', $fishes);
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -86,19 +87,19 @@ class CatController extends Controller
      */
     public function edit($id)
     {
-        $cat = Cat::find($id);
+        $fish = Fish::find($id);
 
-        return view('cat.edit')->with('cat', $cat);
+        return view('fish.edit')->with('fish', $fish);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cat  $cat
+     * @param  \App\Fish  $fish
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cat $cat)
+    public function update(Request $request, Fish $fish)
     {
         $this->validate($request, [
             'title' => 'required',
@@ -109,17 +110,17 @@ class CatController extends Controller
             'quantity' => 'required',
         ]);
 
-        $cat = new Cat();
-        $cat->item_name = $request->input('title');
-        $cat->category = $request->input('category');
-        $cat->description = $request->input('description');
-        $cat->dimensions = $request->input('dimension');
-        $cat->quantity = $request->input('quantity');
-        $cat->price = $request->input('price');
+        $fish = new Fish();
+        $fish->item_name = $request->input('title');
+        $fish->category = $request->input('category');
+        $fish->description = $request->input('description');
+        $fish->dimensions = $request->input('dimension');
+        $fish->quantity = $request->input('quantity');
+        $fish->price = $request->input('price');
 
-        $cat->save();
+        $fish->save();
 
-        return redirect('kates')->with('success', 'Prekė pakeista');
+        return redirect('zuvys')->with('success', 'Prekė pakeista');
     }
 
     /**
@@ -130,9 +131,9 @@ class CatController extends Controller
      */
     public function destroy($id)
     {
-        $cat = Cat::find($id);
-        $cat->delete();
+        $fish = Fish::find($id);
+        $fish->delete();
 
-        return redirect()->back()->with('danger', 'kate buvo panaikinta');
+        return redirect()->back()->with('danger', 'zuvis buvo panaikinta');
     }
 }

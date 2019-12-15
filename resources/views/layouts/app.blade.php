@@ -41,9 +41,9 @@
                                     <button class="dropbtn">Prekės</button>
                                     <div class="dropdown-content">
                                         <a href="/sunys">Šunims</a>
-                                        <a href="#">Katėms</a>
-                                        <a href="#">Graužikams</a>
-                                        <a href="#">Žuvims</a>
+                                        <a href="/kates">Katėms</a>
+                                        <a href="/peles">Graužikams</a>
+                                        <a href="/zuvys">Žuvims</a>
                                         <a href="#">Reptiliams</a>
                                         <a href="#">Paukščiams</a>
                                     </div>
@@ -95,7 +95,9 @@
         </nav>
 
         <main class="py-4">
-            @include('inc.messages')
+            <div class ="topatitraukimasnav">
+                @include('inc.messages')
+            </div>
             @yield('content')
         </main>
     </div>
