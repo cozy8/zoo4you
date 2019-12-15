@@ -36,6 +36,15 @@ class DogController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'category' => 'required',
+            'description' => 'required',
+            'dimension' => 'required',
+            'price' => 'required',
+            'quantity' => 'required',
+        ]);
+
         $dog = new Dog();
         $dog->item_name = $request->input('title');
         $dog->category = $request->input('category');
@@ -79,7 +88,9 @@ class DogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dog = Dog::find($id);
+
+        return view('dog.edit')->with('dog', $dog);
     }
 
     /**
@@ -91,7 +102,24 @@ class DogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'dimension' => 'required',
+            'price' => 'required',
+            'quantity' => 'required',
+        ]);
+
+        $dog = Dog::find($id);
+        $dog->item_name = $request->input('title');
+        $dog->description = $request->input('description');
+        $dog->dimensions = $request->input('dimension');
+        $dog->quantity = $request->input('quantity');
+        $dog->price = $request->input('price');
+
+        $dog->update();
+
+        return redirect('sunys')->with('success', 'Prekė pakeista');
     }
 
     /**
@@ -102,7 +130,10 @@ class DogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dog = Dog::find($id);
+        $dog->delete();
+
+        return redirect()->back()->with('danger', 'sabaka išnyko');
     }
 
 
