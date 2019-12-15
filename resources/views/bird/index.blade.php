@@ -6,7 +6,7 @@
         <div class="col-md-9">
             <div class= "rudasfonas">
                 <div class="topatitraukimasnav">
-                    <img src="/images/img/home/9.jpg" alt="">
+                    <img src="/images/img/home/11.jpg" alt="">
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės Paukščiams</h2>
@@ -39,7 +39,7 @@
                             <div class="col-md-3 ikona">
                             <a href="{{URL::route('birdCategory', ['category' => 'house'])}}">
                                 <div class="ikonospav">
-                                    <img src="/images/img/button/7.png" alt="">
+                                    <img src="/images/img/button/29.png" alt="">
                                 </div>
                                 <div>
                                     <h5>Narvai</h5>

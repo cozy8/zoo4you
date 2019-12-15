@@ -6,11 +6,10 @@
         <div class="col-md-9">
             <div class= "rudasfonas">
                 <div class="topatitraukimasnav">
-                    <img src="/images/img/home/9.jpg" alt="">
+                    <img src="/images/img/home/4.jpg" alt="">
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės Graužikams</h2>
-                    <a href="/peles/1">pelė</a>
                 </div>
             </div>
                 <div class="rudasfonas">
@@ -39,7 +38,7 @@
                             <div class="col-md-3 ikona">
                             <a href="{{URL::route('rodentCategory', ['category' => 'house'])}}">
                                 <div class="ikonospav">
-                                    <img src="/images/img/button/7.png" alt="">
+                                    <img src="/images/img/button/27.png" alt="">
                                 </div>
                                 <div>
                                     <h5>Narvai</h5>
