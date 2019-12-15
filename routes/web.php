@@ -15,8 +15,13 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/sunys/1/kategorija', 'DogController@category')->name('dogCategory');
+
+
+
+
+
 Route::resource('sunys', 'DogController');
 Route::resource('skelbimai', 'BlogController');
-Route::get('/sunys/1/kategorija', 'DogController@category')->name('dogCategory');
-Route::view('pagalba', 'help');
-Route::post('pagalba', 'HelpController@store');
+Route::resource('pagalba', 'HelpController');

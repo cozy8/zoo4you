@@ -15,7 +15,7 @@ class HelpController extends Controller
      */
     public function index()
     {
-        //
+        return view('help');
     }
 
     /**
@@ -40,7 +40,6 @@ class HelpController extends Controller
         $help->email = $request->input('email');
         $help->message = $request->input('message');
         $help->user_id = '1';
-
 
         $help->save();
 
