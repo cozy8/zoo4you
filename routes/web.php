@@ -20,6 +20,8 @@ Route::get('/sunys/1/kategorija', 'DogController@category')->name('dogCategory')
 Route::get('/kates/1/kategorija', 'CatController@category')->name('catCategory');
 Route::get('/zuvys/1/kategorija', 'FishController@category')->name('fishCategory');
 Route::get('/peles/1/kategorija', 'RodentController@category')->name('rodentCategory');
+Route::get('/ropliai/1/kategorija', 'ReptileController@category')->name('reptileCategory');
+Route::get('/pauksciai/1/kategorija', 'BirdController@category')->name('birdCategory');
 
 
 
@@ -29,5 +31,7 @@ Route::resource('sunys', 'DogController');
 Route::resource('kates', 'CatController');
 Route::resource('zuvys', 'FishController');
 Route::resource('peles', 'RodentController');
+Route::resource('ropliai', 'ReptileController');
+Route::resource('pauksciai', 'BirdController');
 Route::resource('skelbimai', 'BlogController');
 Route::resource('pagalba', 'HelpController');
