@@ -35,15 +35,15 @@
                         {{Form::number('price', '', ['class' => 'form-control', 'placeholder' => 'Kaina', 'step' => '0.01'])}}
                     </div>
 
-
+                    <div class="aligncenter"> {{Form::submit('Pridėti skelbimą', ['class' => 'btn btn-primary'])}} </div>
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="aligncenter"> {{Form::submit('Pridėti skelbimą', ['class' => 'btn btn-primary'])}} </div>
-    {!! Form::close() !!}
+
 
 
 

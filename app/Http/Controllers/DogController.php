@@ -139,9 +139,10 @@ class DogController extends Controller
     public function destroy($id)
     {
         $dog = Dog::find($id);
+
         $dog->delete();
 
-        return redirect()->back()->with('danger', 'suo buvo panaikintas');
+        return redirect('sunys')->with('danger', 'suo buvo panaikintas');
     }
 
 

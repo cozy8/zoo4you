@@ -30,14 +30,15 @@
                         {{Form::number('price', $dog->price, ['class' => 'form-control', 'placeholder' => 'Kaina', 'step' => '0.01'])}}
                     </div>
                     <div class="aligncenter">{{Form::submit('Pakeisti prekę', ['class' => 'btn btn-primary'])}}</div>
+                    {!! Form::close() !!}
                 </div>
+                @if(Auth::user()->admin == 1)
+                    {{Form::open(['method'  => 'DELETE', 'action' => ['DogController@destroy', $dog->id]])}}
+                    {{Form::button('Trinti prekę', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
+                    {!! Form::close() !!}
+                @endif
             </div>
         </div>
     </div>
-
-
-
-    {!! Form::close() !!}
-
 
 @endsection
