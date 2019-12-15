@@ -6,11 +6,10 @@
         <div class="col-md-9">
             <div class= "rudasfonas">
                 <div class="topatitraukimasnav">
-                    <img src="/images/img/home/9.jpg" alt="">
+                    <img src="/images/img/home/12.jpg" alt="">
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės ropliams</h2>
-                    <a href="/ropliai/1">roplys</a>
                 </div>
             </div>
                 <div class="rudasfonas">
@@ -39,10 +38,10 @@
                             <div class="col-md-3 ikona">
                             <a href="{{URL::route('reptileCategory', ['category' => 'house'])}}">
                                 <div class="ikonospav">
-                                    <img src="/images/img/button/7.png" alt="">
+                                    <img src="/images/img/button/30.png" alt="">
                                 </div>
                                 <div>
-                                    <h5>Narvai</h5>
+                                    <h5>Terariumai</h5>
                                 </div>
                                 </a>
                             </div>

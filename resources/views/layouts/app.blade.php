@@ -44,7 +44,7 @@
                                         <a href="/kates">Katėms</a>
                                         <a href="/peles">Graužikams</a>
                                         <a href="/zuvys">Žuvims</a>
-                                        <a href="/ropliai">Reptiliams</a>
+                                        <a href="/ropliai">Ropliams</a>
                                         <a href="/pauksciai">Paukščiams</a>
                                     </div>
                                 </div>
