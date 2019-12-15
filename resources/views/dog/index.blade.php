@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mainmargin">
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class= "rudasfonas">
@@ -10,7 +10,7 @@
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės šunims</h2>
-                    <a href="/sabaka/1">SABAKA</a>
+                    <a href="/sunys/1">SABAKA</a>
                 </div>
             </div>
                 <div class="rudasfonas">
@@ -48,6 +48,7 @@
                             </div>
                     </div>
 
+
                     <div class="row">
                         <div class="col-md-3 ikona">
                         <a href="{{URL::route('dogCategory', ['category' => 'toys'])}}">
@@ -84,94 +85,7 @@
 
 
 
-                <div class="topatitraukimas">
-                    <div class="row ">
-                        <div class="col-md-3">
-                        <a href="">
-                            <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/prekes/1.jpg" alt=""> </a>
-                            </div>
-                        </div>
 
-                        <div class="col-md-9 ">
-                            <div class="rudasfonas skelbimas">
-                                <div class="row">
-                                    <div class="col-md-8 topatitraukimas ">
-                                        <h6> PAVADINIMAS </h6>
-                                        <p class="topatitraukimas">APRAŠYMAS</p>
-                                    </div>
-                                </div>
-                                    <div class=" row col-md-12 topatitraukimas" >
-                                            <div class = "col-md-2 sellrow" style="padding-top: 3px;"> Kaina: 20.00  </div>
-                                            <div class = "col-md-2 sellrow"> Kiekis: <input type="number" name="quantity" min="1" max="5"> </div>
-                                             <div class = "col-md-1"><img class="cartimgprekes"src="/images/img/icone/bag.png"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                    </div>
-                </div>
-
-
-                <div class="topatitraukimas">
-                    <div class="row ">
-                        <div class="col-md-3">
-                        <a href="">
-                            <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/prekes/2.jpg" alt=""> </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-9 ">
-                            <div class="rudasfonas skelbimas">
-                                <div class="row">
-                                    <div class="col-md-8 topatitraukimas ">
-                                        <h6> PAVADINIMAS </h6>
-                                        <p class="topatitraukimas">APRAŠYMAS</p>
-                                    </div>
-                                </div>
-                                    <div class=" row col-md-12 topatitraukimas" >
-                                            <div class = "col-md-2 sellrow" style="padding-top: 3px;"> Kaina: 20.00  </div>
-                                            <div class = "col-md-2 sellrow"> Kiekis: <input type="number" name="quantity" min="1" max="5"> </div>
-                                             <div class = "col-md-1"><img class="cartimgprekes"src="/images/img/icone/bag.png"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                    </div>
-                </div>
-
-
-                <div class="topatitraukimas">
-                    <div class="row ">
-                        <div class="col-md-3">
-                        <a href="">
-                            <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/prekes/3.jpg" alt=""> </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-9 ">
-                            <div class="rudasfonas skelbimas">
-                                <div class="row">
-                                    <div class="col-md-8 topatitraukimas ">
-                                        <h6> PAVADINIMAS </h6>
-                                        <p class="topatitraukimas">APRAŠYMAS</p>
-                                    </div>
-                                </div>
-                                    <div class=" row col-md-12 topatitraukimas" >
-                                            <div class = "col-md-2 sellrow" style="padding-top: 3px;"> Kaina: 20.00  </div>
-                                            <div class = "col-md-2 sellrow"> Kiekis: <input type="number" name="quantity" min="1" max="5"> </div>
-                                             <div class = "col-md-1"><img class="cartimgprekes"src="/images/img/icone/bag.png"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
 
 
