@@ -11,9 +11,12 @@
                 <div class="topatitraukimas">
                     <h2>Prekės šunims</h2>
 
+
+                    @auth()
                     @if(Auth::user()->admin == 1)
                     <a class="btn btn-primary" href="/sunys/create">Sukurti prekę</a>
                     @endif
+                    @endauth
                 </div>
             </div>
                 <div class="rudasfonas">
