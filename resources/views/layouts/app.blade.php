@@ -44,8 +44,8 @@
                                         <a href="/kates">Katėms</a>
                                         <a href="/peles">Graužikams</a>
                                         <a href="/zuvys">Žuvims</a>
-                                        <a href="#">Reptiliams</a>
-                                        <a href="#">Paukščiams</a>
+                                        <a href="/ropliai">Reptiliams</a>
+                                        <a href="/pauksciai">Paukščiams</a>
                                     </div>
                                 </div>
                                 <!--<a class="nav-link"  href="{{ route('login') }}">{{ __('Prekės') }}</a>  pakeisti route -->

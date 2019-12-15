@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Bird' => $baseDir . '/app/Bird.php',
     'App\\Blog' => $baseDir . '/app/Blog.php',
     'App\\Cat' => $baseDir . '/app/Cat.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
@@ -19,6 +20,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
+    'App\\Http\\Controllers\\BirdController' => $baseDir . '/app/Http/Controllers/BirdController.php',
     'App\\Http\\Controllers\\BlogController' => $baseDir . '/app/Http/Controllers/BlogController.php',
     'App\\Http\\Controllers\\CatController' => $baseDir . '/app/Http/Controllers/CatController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
@@ -26,6 +28,7 @@ return array(
     'App\\Http\\Controllers\\FishController' => $baseDir . '/app/Http/Controllers/FishController.php',
     'App\\Http\\Controllers\\HelpController' => $baseDir . '/app/Http/Controllers/HelpController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\ReptileController' => $baseDir . '/app/Http/Controllers/ReptileController.php',
     'App\\Http\\Controllers\\RodentController' => $baseDir . '/app/Http/Controllers/RodentController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
@@ -41,6 +44,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\Reptile' => $baseDir . '/app/Reptile.php',
     'App\\Rodent' => $baseDir . '/app/Rodent.php',
     'App\\User' => $baseDir . '/app/User.php',
     'Carbon\\Carbon' => $vendorDir . '/nesbot/carbon/src/Carbon/Carbon.php',

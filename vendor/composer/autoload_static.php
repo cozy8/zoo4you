@@ -417,6 +417,7 @@ class ComposerStaticInit8dbc8ffea284580c8f0e0ab4d4bf2101
     );
 
     public static $classMap = array (
+        'App\\Bird' => __DIR__ . '/../..' . '/app/Bird.php',
         'App\\Blog' => __DIR__ . '/../..' . '/app/Blog.php',
         'App\\Cat' => __DIR__ . '/../..' . '/app/Cat.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
@@ -430,6 +431,7 @@ class ComposerStaticInit8dbc8ffea284580c8f0e0ab4d4bf2101
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\BirdController' => __DIR__ . '/../..' . '/app/Http/Controllers/BirdController.php',
         'App\\Http\\Controllers\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/BlogController.php',
         'App\\Http\\Controllers\\CatController' => __DIR__ . '/../..' . '/app/Http/Controllers/CatController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -437,6 +439,7 @@ class ComposerStaticInit8dbc8ffea284580c8f0e0ab4d4bf2101
         'App\\Http\\Controllers\\FishController' => __DIR__ . '/../..' . '/app/Http/Controllers/FishController.php',
         'App\\Http\\Controllers\\HelpController' => __DIR__ . '/../..' . '/app/Http/Controllers/HelpController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\ReptileController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReptileController.php',
         'App\\Http\\Controllers\\RodentController' => __DIR__ . '/../..' . '/app/Http/Controllers/RodentController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -452,6 +455,7 @@ class ComposerStaticInit8dbc8ffea284580c8f0e0ab4d4bf2101
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Reptile' => __DIR__ . '/../..' . '/app/Reptile.php',
         'App\\Rodent' => __DIR__ . '/../..' . '/app/Rodent.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
