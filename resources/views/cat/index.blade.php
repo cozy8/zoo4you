@@ -13,6 +13,13 @@
                     <a href="/kates/1">kate</a>
                 </div>
             </div>
+
+                    @auth()
+                    @if(Auth::user()->admin == 1)
+                    <a class="btn btn-primary" href="/kates/create">Sukurti prekę</a>
+                    @endif
+                    @endauth
+
                 <div class="rudasfonas">
                     <div class="row">
                             <div class="col-md-3 ikona">

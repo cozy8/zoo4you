@@ -10,6 +10,9 @@
                             <h2> Skelbimų lenta </h2>
                 </div>
             </div>
+                    @auth()
+                    <a class="btn btn-primary" href="/skelbimai/create">Sukurti skelbimą</a>
+                    @endauth
 
             <div class="topatitraukimas">
                 <div class="rudasfonas">

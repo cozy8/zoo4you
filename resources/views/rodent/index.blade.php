@@ -12,6 +12,13 @@
                     <h2>Prekės Graužikams</h2>
                 </div>
             </div>
+
+                    @auth()
+                    @if(Auth::user()->admin == 1)
+                    <a class="btn btn-primary" href="/peles/create">Sukurti prekę</a>
+                    @endif
+                    @endauth
+
                 <div class="rudasfonas">
                     <div class="row">
                             <div class="col-md-3 ikona">
