@@ -11202,6 +11202,10 @@ footer {
   padding-left: 20px;
 }
 
+.navbar-collapse.collapse.show {
+  background-color: #e3d9ce;
+}
+
 .bg-white {
   background-color: rgba(244, 240, 236, 0.7) !important;
 }
@@ -11543,6 +11547,10 @@ p {
 
   .mainmargin {
     margin-bottom: 0px;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid #5f4523;
   }
 }
 

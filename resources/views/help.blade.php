@@ -9,21 +9,33 @@
         <div class="col-md-9">
             <div class="topatitraukimasnav">
 
-                <div class="form-group">
-                    {{Form::label('title', 'Pavadinimas')}}
-                    {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Pavadinimas'])}}
-                </div>
-                <div class="form-group">
-                    {{Form::label('category', 'Skelbimo kategorija')}}
-                    {{Form::select('category', ['lost' => 'Dingo', 'gifting' => 'Dovanoju','adoption' => 'Ieško namų','trade' => 'Keičiu','wandering' => 'Klaidžioja','sell' => 'Parduodu', 'buy' => 'Perku', 'service' => 'Paslaugos', 'found' => 'Rasta', 'various' => 'Įvairūs',], ['class' => 'form-control'])}}
-                </div>
-                <div class="form-group">
-                    {{Form::label('description', 'Aprašymas')}}
-                    {{Form::textarea('description', '', ['class' => 'form-control', 'placeholder' => 'Aprašymas'])}}
-                </div>
+                    <div class= "rudasfonas">
+                            <div class="topatitraukimas">
+                                        <h2> Pagalbos centras </h2>
+                            </div>
+                    </div>
+
+                    <div class="topatitraukimas">
+                        <div class="form-group">
+                            {{Form::text('email', '', ['class' => 'form-control', 'placeholder' => 'Jūsų e-mail adresas'])}}
+                        </div>
+                        <div class="form-group">
+                            {{Form::label('message', 'Pranešimas')}}
+                            {{Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Aprašykite problemą, su kuria susidūrėte'])}}
+                        </div>
+                    </div>
+
+
 
     <div class="aligncenter"> {{Form::submit('Siųsti', ['class' => 'btn btn-primary'])}} </div>
 {!! Form::close() !!}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 

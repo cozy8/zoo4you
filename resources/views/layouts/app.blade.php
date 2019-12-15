@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/" >{{ __('Pradžia') }}</a> <!-- pakeisti route -->
+                                <a class="nav-link" href="/" >Pradžia</a> <!-- pakeisti route -->
                             </li>
                             <li class="nav-item">
                                 <div class="dropdown">
@@ -51,10 +51,10 @@
                                 <!--<a class="nav-link"  href="{{ route('login') }}">{{ __('Prekės') }}</a>  pakeisti route -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/skelbimai" >{{ __('Skelbimų lenta') }}</a> <!-- pakeisti route -->
+                                <a class="nav-link" href="/skelbimai" >Skelbimų lenta</a> <!-- pakeisti route -->
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/pagalba">{{ __('Pagalba') }}</a> <!-- pakeisti route -->
+                                <a class="nav-link" href="/pagalba">Pagalba</a> <!-- pakeisti route -->
                             </li>
                     </ul>
 
@@ -63,11 +63,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Prisijungti') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">Prisijungti</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registruotis') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">Registruotis</a>
                                 </li>
                             @endif
                         @else
