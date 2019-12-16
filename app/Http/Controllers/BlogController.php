@@ -25,9 +25,9 @@ class BlogController extends Controller
      */
     public function index()
     {
+        $blogs = Blog::latest()->take(3)->get();
 
-
-        return view('blog.index');
+        return view('blog.index')->with('blogs', $blogs);
     }
 
     /**
@@ -58,7 +58,7 @@ class BlogController extends Controller
 
         $blog->save();
 
-        return redirect('skelbimai')->with('success', 'Skelbimas pridėtas');
+        return redirect('skelbimai')->with('success', 'Skelbimas laukia patvirtinimo');
     }
 
     /**
@@ -67,9 +67,11 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($id)
     {
+        $blog = Blog::find($id);
 
+        return view('blog.show')->with('blog', $blog);
     }
 
     /**
@@ -101,10 +103,34 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy($id)
     {
-        //
+        $blog = Dog::find($id);
+
+        $blog->delete();
+
+        return redirect('skelbimai')->with('danger', 'skelbimas panaikintas');
     }
+
+
+    public function setConfirms()
+    {
+        $blogs = Blog::where('confirmation', 0)->get();
+
+        return view('blog.confirm')->with('blogs', $blogs);
+    }
+
+    public function confirm($id)
+    {
+        $blog = Blog::find($id);
+
+        $blog->confirmation = 1;
+
+        $blog->update();
+
+        return redirect()->back()->with('success', 'skelbimas patvirtintas');
+    }
+
 }
 
 

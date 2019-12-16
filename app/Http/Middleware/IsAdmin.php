@@ -20,6 +20,6 @@ class IsAdmin
             return $next($request);
         }
 
-        return redirect()->back()->with('error', 'you dont belong there peasant');
+        return abort(403, 'Cia negalima ;)');
     }
 }
