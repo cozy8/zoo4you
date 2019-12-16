@@ -54,24 +54,28 @@
 
 
 
-
+@auth()
                                             <div class="col-md-2 sellrow">
                                                 {!! Form::open(['action' => 'CartController@store', $dog->id]) !!}
 
-                                                {{Form::hidden('category', $dog->category, ['placeholder' => 'Pavadinimas'])}}
+                                                {{Form::hidden('user_id', Auth::id())}}
+                                                {{Form::hidden('item', $dog->id)}}
+                                                {{Form::hidden('category', 1)}}
 
-                                                {{Form::hidden('category', $dog->category, ['placeholder' => 'Pavadinimas'])}}
+                                                <input style="width: 100%;" type="number" name="quantity" min="1" max="5" required>
 
-                                                <input style="width: 100%;" type="number" name="quantity" min="1" max="5">
 
 
                                             </div>
 
                                             <div class="col-md-2 rudasfonas  sellrow">
 
-                                                <img class="cartimg"src="/images/img/icone/bag.png">
-                                            </div>
+                                                <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
 
+                                                {!! Form::close() !!}
+
+                                            </div>
+@endauth
 
 
                                     </div>

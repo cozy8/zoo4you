@@ -43,19 +43,17 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-
         $cart = new Cart();
 
-
-        $cart->userid = $request->input('id');
-        $cart->category = $request->input('category');
-
+        $cart->user_id = $request->user()->id;
+        $cart->item_id = $request->input('item');
+        $cart->item_category = $request->input('category');
         $cart->quantity = $request->input('quantity');
 
 
         $cart->save();
 
-        return redirect()->back()->with('success', 'Prekė pridėta');
+        return redirect()->back()->with('success', 'Prekė pridėta į krepšėlį');
     }
 
     /**
@@ -68,7 +66,7 @@ class CartController extends Controller
     {
         $cart = Cart::where('user_id', $id)->get();
 
-        return view('cart.index');
+        return view('cart.index')->with('cart', $cart);
     }
 
     /**
