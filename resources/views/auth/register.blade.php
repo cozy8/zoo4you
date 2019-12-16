@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mainmargin">
     <div class="row justify-content-center">
         <div class="col-md-8 topatitraukimasnav">
             <div class="card">
@@ -33,7 +33,7 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>Blogai įvestas E-Mail</strong>
+                                        <strong>Blogai įvestas arba jau egzistuojantis E-Mail</strong>
                                     </span>
                                 @enderror
                             </div>
@@ -47,7 +47,7 @@
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                        <strong>Slaptaždyje turi būti bent 8 simboliai, po 1 didižiają, mažają raides, taip pat turi būti bent 1 skaičius</strong>
                                     </span>
                                 @enderror
                             </div>
