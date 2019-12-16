@@ -56,11 +56,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/pagalba">Pagalba</a> <!-- pakeisti route -->
                             </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{URL::route('blogConfirm')}}">Tvirtinimas</a> <!-- pakeisti route -->
-                        </li>
-
+                        @auth()
+                            @if(Auth::user()->admin == 1)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{URL::route('blogConfirm')}}">Tvirtinimas</a>
+                                </li>
+                            @endif
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

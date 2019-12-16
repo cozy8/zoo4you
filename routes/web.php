@@ -35,3 +35,5 @@ Route::resource('ropliai', 'ReptileController');
 Route::resource('pauksciai', 'BirdController');
 Route::resource('skelbimai', 'BlogController');
 Route::resource('pagalba', 'HelpController');
+Route::resource('krepselis', 'CartController');
+Route::resource('patike', 'LikeController');

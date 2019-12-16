@@ -50,8 +50,30 @@
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p>{{$dog->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p>{{$dog->dimensions}} </p> </div>
-                                            <div class="col-md-2 sellrow"> <input style="width: 100%;" type="number" name="quantity" min="1" max="5"> </div>
-                                            <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
+
+
+
+
+
+                                            <div class="col-md-2 sellrow">
+                                                {!! Form::open(['action' => 'CartController@store', $dog->id]) !!}
+
+                                                {{Form::hidden('category', $dog->category, ['placeholder' => 'Pavadinimas'])}}
+
+                                                {{Form::hidden('category', $dog->category, ['placeholder' => 'Pavadinimas'])}}
+
+                                                <input style="width: 100%;" type="number" name="quantity" min="1" max="5">
+
+
+                                            </div>
+
+                                            <div class="col-md-2 rudasfonas  sellrow">
+
+                                                <img class="cartimg"src="/images/img/icone/bag.png">
+                                            </div>
+
+
+
                                     </div>
                                 </div>
 
