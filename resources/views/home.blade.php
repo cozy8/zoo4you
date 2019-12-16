@@ -40,7 +40,7 @@
                                 </a>
                             </div>
                             <div class="col-md-3 ikona">
-                            <a href="">
+                            <a href="/peles">
                                 <div class="ikonospav">
                                     <img src="/images/img/button/13.png" alt="">
                                 </div>
@@ -63,7 +63,7 @@
                             </a>
                         </div>
                         <div class="col-md-3 ikona">
-                        <a href="">
+                        <a href="/ropliai">
                             <div class="ikonospav">
                                 <img src="/images/img/button/16.png" alt="">
                             </div>
@@ -73,7 +73,7 @@
                             </a>
                         </div>
                         <div class="col-md-3 ikona">
-                        <a href="">
+                        <a href="/pauksciai">
                             <div class="ikonospav">
                                 <img src="/images/img/button/15.png" alt="">
                             </div>

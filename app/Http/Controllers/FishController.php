@@ -61,6 +61,7 @@ class FishController extends Controller
         $fish->dimensions = $request->input('dimension');
         $fish->quantity = $request->input('quantity');
         $fish->price = $request->input('price');
+        $fish->photo = '.!.';
 
         $fish->save();
 

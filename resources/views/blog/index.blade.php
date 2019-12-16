@@ -11,6 +11,13 @@
                 </div>
             </div>
 
+            <div class="aligncenter topatitraukimas">
+                @auth()
+                    <a class="btn btn-primary" href="/skelbimai/create">Sukurti skelbimą</a>
+                @endauth
+            </div>
+
+
             <div class="topatitraukimas">
                 <div class="rudasfonas">
                     <div class="row">

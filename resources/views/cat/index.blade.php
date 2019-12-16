@@ -10,9 +10,18 @@
                 </div>
                 <div class="topatitraukimas">
                     <h2>Prekės katėms</h2>
-                    <a href="/kates/1">kate</a>
                 </div>
             </div>
+
+                <div class="aligncenter topatitraukimas">
+                    @auth()
+                    @if(Auth::user()->admin == 1)
+                    <a class="btn btn-primary" href="/kates/create">Sukurti prekę</a>
+                    @endif
+                    @endauth
+                </div>
+
+
                 <div class="rudasfonas">
                     <div class="row">
                             <div class="col-md-3 ikona">
@@ -82,9 +91,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
 
 
 

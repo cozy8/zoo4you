@@ -11104,6 +11104,10 @@ a.text-dark:focus {
   text-align: center;
 }
 
+.alignright {
+  text-align: right;
+}
+
 html {
   position: relative;
   min-height: 100%;

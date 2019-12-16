@@ -9,6 +9,16 @@
             <div class="col-md-9">
                 <div class="topatitraukimasnav">
 
+                <div class="alignright">
+                    @auth()
+                    @if(Auth::user()->admin == 1)
+                        {{Form::open(['method'  => 'DELETE', 'action' => ['fishController@destroy', $fish->id]])}}
+                        {{Form::button('Trinti prekę', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
+                        {!! Form::close() !!}
+                    @endif
+                    @endauth
+                </div>
+
                     <div class="form-group">
                         {{Form::label('title', 'Prekės pavadinimas')}}
                         {{Form::text('title', $fish->item_name, ['class' => 'form-control', 'placeholder' => 'Prekės pavadinimas'])}}
