@@ -13,7 +13,7 @@ class BlogController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->only('create', 'store', 'update', 'edit');
-        $this->middleware('admin')->only('destroy');
+        $this->middleware('admin')->only('destroy', 'confirm', 'setConfirms');
     }
 
 
