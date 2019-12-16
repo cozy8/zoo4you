@@ -122,7 +122,6 @@
                     </div>
 
 
-
                     <div class="topatitraukimas">
                         <div class= "rudasfonas">
                             <div class="topatitraukimas">
@@ -131,95 +130,37 @@
                         </div>
                     </div>
 
-                    <div class="topatitraukimas">
-                    <div class="row ">
-                        <div class="col-md-3">
-                        <a href="">
-                            <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/skelbimai/1.jpg" alt=""> </a>
-                            </div>
-                        </div>
 
-                        <div class="col-md-9 ">
-                            <div class="rudasfonas skelbimas">
-                                <div class="row">
-                                    <div class="col-md-8 topatitraukimas ">
-                                        <h6> PAVADINIMAS </h6>
-                                        <p class="topatitraukimas">APRAŠYMAS</p>
-                                    </div>
-                                    <div class="col-md-4 topatitraukimas">
-                                        <p>skelbimo data</p>
-                                        <p>Miestas</p>
-                                        <p>Peržiūros</p>
-                                        <p>Kaina</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+                @foreach($blogs as $blog)
                 <div class="topatitraukimas">
                     <div class="row ">
                         <div class="col-md-3">
                         <a href="">
                             <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt=""> </a>
+                                <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt="">
                             </div>
+                        </a>
+
                         </div>
 
                         <div class="col-md-9 ">
                             <div class="rudasfonas skelbimas">
                                 <div class="row">
                                     <div class="col-md-8 topatitraukimas ">
-                                        <h6> PAVADINIMAS </h6>
-                                        <p class="topatitraukimas">APRAŠYMAS</p>
+                                        <h6> {{$blog->title}} </h6>
+                                        <p class="topatitraukimas">{{$blog->description}}</p>
                                     </div>
                                     <div class="col-md-4 topatitraukimas">
-                                        <p>skelbimo data</p>
-                                        <p>Miestas</p>
-                                        <p>Peržiūros</p>
-                                        <p>Kaina</p>
+                                        <p>{{$blog->created_at}}</p>
+                                        <p>{{$blog->location}}</p>
+                                        <p>Kaina: {{$blog->price}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-                <div class="topatitraukimas">
-                    <div class="row ">
-                        <div class="col-md-3">
-                        <a href="">
-                            <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/skelbimai/3.jpg" alt=""> </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-9 ">
-                            <div class="rudasfonas skelbimas">
-                                <div class="row">
-                                    <div class="col-md-8 topatitraukimas ">
-                                        <h6> PAVADINIMAS </h6>
-                                        <p class="topatitraukimas">APRAŠYMAS</p>
-                                    </div>
-                                    <div class="col-md-4 topatitraukimas">
-                                        <p>skelbimo data</p>
-                                        <p>Miestas</p>
-                                        <p>Peržiūros</p>
-                                        <p>Kaina</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-
+                @endforeach
 
         </div>
     </div>
