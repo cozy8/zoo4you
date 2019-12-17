@@ -28,6 +28,7 @@
                                 <a href="/sunys/{{$dogger->id}}"> <p>  plačiau apie produktą... </p> </a>
                                 <div class="">
                                     <div class = "row topatitraukimasdidelis justify-content-center">
+
                                         <div class="col-md-3">
                                             {!! Form::open(['action' => 'CartController@store', $dogger->id]) !!}
 
@@ -50,6 +51,7 @@
 
                                             {!! Form::close() !!}
                                         </div>
+
                                     </div>
                                 </div>
 

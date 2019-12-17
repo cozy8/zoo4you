@@ -42,16 +42,38 @@
                                             <div class="col-md-5 sellrow">
                                                  <p>Išmatavimai: </p>
                                             </div>
+                                            @auth()
                                             <div class="col-md-2 sellrow">
                                                 <p>Kiekis: </p>
                                             </div>
+                                            @endauth
                                     </div>
 
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p>{{$fish->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p>{{$fish->dimensions}} </p> </div>
-                                            <div class="col-md-2 sellrow"> <input style="width: 100%;" type="number" name="quantity" min="1" max="5"> </div>
-                                            <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
+
+@auth()
+                                            <div class="col-md-2 sellrow">
+                                                {!! Form::open(['action' => 'CartController@store', $fish->id]) !!}
+
+                                                {{Form::hidden('user_id', Auth::id())}}
+                                                {{Form::hidden('item', $fish->id)}}
+                                                {{Form::hidden('category', 4)}}
+
+                                                <input style="width: 100%;" type="number" name="quantity" min="1" max="5" required>
+                                            </div>
+
+                                            <div class="col-md-2 rudasfonas  sellrow">
+
+                                                <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
+
+                                                {!! Form::close() !!}
+
+                                            </div>
+@endauth
+
+
                                     </div>
                                 </div>
 
@@ -59,14 +81,26 @@
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p> Kaina: {{$fish->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p> Išmatavimai:{{$fish->dimensions}} </p> </div>
-                                            <div class="col-md-2 rudasfonas sellrow">  <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5"> </div>
-                                            <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
+
+                                            @auth()
+                                            <div class="col-md-2 rudasfonas sellrow">
+
+                                                {!! Form::open(['action' => 'CartController@store', $fish->id]) !!}
+
+                                                {{Form::hidden('user_id', Auth::id())}}
+                                                {{Form::hidden('item', $fish->id)}}
+                                                {{Form::hidden('category', 4)}}
+
+                                                <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5" required> </div>
+                                                @endauth
+
+
+                                            <div class="col-md-2 rudasfonas  sellrow">
+                                                <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
+                                                {!! Form::close() !!}
+                                            </div>
                                     </div>
                                 </div>
-                                            <!--<p>skelbimo data</p>
-                                            <p>Miestas</p>
-                                            <p>Peržiūros</p>
-                                            <p>Kaina</p>-->
 
                         </div>
                     </div>

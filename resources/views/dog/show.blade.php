@@ -80,6 +80,7 @@
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p> Kaina: {{$dog->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p> Išmatavimai:{{$dog->dimensions}} </p> </div>
+
                                         @auth()
                                             <div class="col-md-2 rudasfonas sellrow">
 
