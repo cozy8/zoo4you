@@ -7,7 +7,7 @@
             <div class="col-md-11 topatitraukimasnav">
                 <div class= "rudasfonas">
                     <div class="topatitraukimas">
-                        <h2> Priekių krepšelis </h2>
+                        <h2> Prekių krepšelis </h2>
                     </div>
                 </div>
             </div>
@@ -34,10 +34,9 @@
                                 </div>
                                 <div class="col-md-4 topatitraukimas">
                                     <p>Kaina: {{$item->price}}</p>
-                                    <p>Kiekis: {{$item->quantity}}</p>
                                     <div>
-                                        {{Form::open(['method'  => 'DELETE', 'action' => ['CartController@destroy', $item->cart_id]])}}
-                                        {{Form::button('Išimti iš krepšelio', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
+                                        {{Form::open(['method'  => 'DELETE', 'action' => ['LikeController@destroy', $item->like_id]])}}
+                                        {{Form::button('Pamiršti', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
                                         {!! Form::close() !!}
                                     </div>
                                 </div>

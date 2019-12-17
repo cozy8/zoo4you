@@ -61,6 +61,7 @@ class CatController extends Controller
         $cat->dimensions = $request->input('dimension');
         $cat->quantity = $request->input('quantity');
         $cat->price = $request->input('price');
+        $cat->photo = $request->file('photo')->store('public/cats');
 
         $cat->save();
 

@@ -84,15 +84,29 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href="{{route('krepselis.index')}}">
+                                        Krepšelis
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{route('patike.index')}}">
+                                        Patikę
+                                    </a>
+
+                                    <a class="dropdown-item" href="/">
+                                        Nustatymai
+                                    </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('atsijungti') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
+
                                 </div>
                             </li>
                         @endguest

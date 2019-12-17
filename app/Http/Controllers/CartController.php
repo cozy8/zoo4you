@@ -2,9 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Bird;
 use App\Cart;
+use App\Cat;
+use App\Dog;
+use App\Fish;
 use App\Http\Controllers\Controller;
+use App\Reptile;
+use App\Rodent;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -22,7 +29,32 @@ class CartController extends Controller
      */
     public function index()
     {
+        $id = Auth::id();
 
+        $items = array();
+
+        $cart = Cart::where('user_id', $id)->get();
+
+        foreach ($cart as $item){
+            if($item->item_category == 1){
+                $itemdetails = Dog::find($id);
+            }elseif ($item->item_category == 2){
+                $itemdetails = Cat::find($id);
+            }elseif ($item->item_category == 3){
+                $itemdetails = Rodent::find($id);
+            }elseif ($item->item_category == 4){
+                $itemdetails = Fish::find($id);
+            }elseif ($item->item_category == 5){
+                $itemdetails = Reptile::find($id);
+            }elseif ($item->item_category == 6){
+                $itemdetails = Bird::find($id);
+            }
+            $itemdetails->quantity = $item->quantity;
+            $itemdetails->cart_id = $item->id;
+            array_push($items, $itemdetails);
+        }
+
+        return view('cart.index')->with('items', $items);
     }
 
     /**
@@ -64,9 +96,7 @@ class CartController extends Controller
      */
     public function show($id)
     {
-        $cart = Cart::where('user_id', $id)->get();
 
-        return view('cart.index')->with('cart', $cart);
     }
 
     /**
@@ -98,8 +128,12 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy($id)
     {
-        //
+        $cart = Cart::find($id);
+
+        $cart->delete();
+
+        return redirect('krepselis')->with('success', 'Preke isimta');
     }
 }
