@@ -58,7 +58,8 @@ class ReptileController extends Controller
         $reptile->dimensions = $request->input('dimension');
         $reptile->quantity = $request->input('quantity');
         $reptile->price = $request->input('price');
-        $reptile->photo = '.!.';
+        $reptile->photo = $request->file('photo')->store('public/reptile');
+
 
         $reptile->save();
 
@@ -117,14 +118,12 @@ class ReptileController extends Controller
 
         $reptile = new Reptile();
         $reptile->item_name = $request->input('title');
-        $reptile->category = $request->input('category');
         $reptile->description = $request->input('description');
         $reptile->dimensions = $request->input('dimension');
         $reptile->quantity = $request->input('quantity');
         $reptile->price = $request->input('price');
-        $reptile->photo = '.!.';
 
-        $reptile->save();
+        $reptile->update();
 
         return redirect('/ropliai')->with('success', 'Prekė pakeista');
     }

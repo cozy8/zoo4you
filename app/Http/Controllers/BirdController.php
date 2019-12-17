@@ -59,7 +59,7 @@ class BirdController extends Controller
         $bird->dimensions = $request->input('dimension');
         $bird->quantity = $request->input('quantity');
         $bird->price = $request->input('price');
-        $bird->photo = '.!.';
+        $bird->photo = $request->file('photo')->store('public/birds');
 
         $bird->save();
 
@@ -118,14 +118,13 @@ class BirdController extends Controller
 
         $bird = new Bird();
         $bird->item_name = $request->input('title');
-        $bird->category = $request->input('category');
         $bird->description = $request->input('description');
         $bird->dimensions = $request->input('dimension');
         $bird->quantity = $request->input('quantity');
         $bird->price = $request->input('price');
-        $bird->photo = '.!.';
+        $bird->photo = $request->file('photo')->store('public/birds');
 
-        $bird->save();
+        $bird->update();
 
         return redirect('/pauksciai')->with('success', 'Prekė pakeista');
     }

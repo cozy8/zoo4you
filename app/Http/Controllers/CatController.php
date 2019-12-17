@@ -52,6 +52,7 @@ class CatController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
+            'photo' => 'required'
         ]);
 
         $cat = new Cat();
@@ -120,13 +121,12 @@ class CatController extends Controller
 
         $cat = new Cat();
         $cat->item_name = $request->input('title');
-        $cat->category = $request->input('category');
         $cat->description = $request->input('description');
         $cat->dimensions = $request->input('dimension');
         $cat->quantity = $request->input('quantity');
         $cat->price = $request->input('price');
 
-        $cat->save();
+        $cat->update();
 
         return redirect('kates')->with('success', 'Prekė pakeista');
     }

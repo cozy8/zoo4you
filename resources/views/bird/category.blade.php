@@ -19,7 +19,7 @@
             <div class="col-md-4">
 
                     <div class="card">
-                            <img class="cardphoto" src="/images/img/skelbimai/2.jpg" alt="" style="width:100%">
+                            <img class="cardphoto" src="{{Storage::url($bird->photo)}}" alt="" style="width:100%">
                             <div class="cardcontainer">
                                 <h5><b>{{$birder->item_name}}</b></h5>
                                 <p>Išmatavimai: {{$birder->dimensions}} </p>

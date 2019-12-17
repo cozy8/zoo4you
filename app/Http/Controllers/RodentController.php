@@ -61,7 +61,7 @@ class RodentController extends Controller
         $rodent->dimensions = $request->input('dimension');
         $rodent->quantity = $request->input('quantity');
         $rodent->price = $request->input('price');
-        $rodent->photo = '.!.';
+        $rodent->photo = $request->file('photo')->store('public/rodent');
 
         $rodent->save();
 
@@ -120,14 +120,12 @@ class RodentController extends Controller
 
         $rodent = new Rodent();
         $rodent->item_name = $request->input('title');
-        $rodent->category = $request->input('category');
         $rodent->description = $request->input('description');
         $rodent->dimensions = $request->input('dimension');
         $rodent->quantity = $request->input('quantity');
         $rodent->price = $request->input('price');
-        $rodent->photo = '.!.';
 
-        $rodent->save();
+        $rodent->update();
 
         return redirect('/peles')->with('success', 'Prekė pakeista');
     }
