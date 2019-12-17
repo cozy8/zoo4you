@@ -54,6 +54,7 @@ class CartController extends Controller
             array_push($items, $itemdetails);
         }
 
+
         return view('cart.index')->with('items', $items);
     }
 
