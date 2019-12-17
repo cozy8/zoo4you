@@ -13,13 +13,14 @@
             </div>
         </div>
 
-        @foreach($items as $item)
+        @foreach($items as $ala)
+
             <div class="topatitraukimas">
                 <div class="row ">
                     <div class="col-md-3">
                         <a href="">
                             <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt="">
+                                <img class="skelbimopav" src="{{Storage::url($ala[0]->photo)}}" alt="">
                             </div>
                         </a>
 
@@ -29,14 +30,14 @@
                         <div class="rudasfonas skelbimas">
                             <div class="row">
                                 <div class="col-md-8 topatitraukimas ">
-                                    <h6> {{$item->item_name}} </h6>
-                                    <p class="topatitraukimas">{{$item->description}}</p>
+                                    <h6> {{$ala[0]->item_name}} </h6>
+                                    <p class="topatitraukimas">{{$ala[0]->description}}</p>
                                 </div>
                                 <div class="col-md-4 topatitraukimas">
-                                    <p>Kaina: {{$item->price}}</p>
-                                    <p>Kiekis: {{$item->quantity}}</p>
+                                    <p>Kaina: {{$ala[0]->price}}</p>
+                                    <p>Kiekis: {{$ala->quantity}}</p>
                                     <div>
-                                        {{Form::open(['method'  => 'DELETE', 'action' => ['CartController@destroy', $item->cart_id]])}}
+                                        {{Form::open(['method'  => 'DELETE', 'action' => ['CartController@destroy', $ala->cart_id]])}}
                                         {{Form::button('Išimti iš krepšelio', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
                                         {!! Form::close() !!}
                                     </div>
