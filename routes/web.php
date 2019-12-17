@@ -24,6 +24,8 @@ Route::get('/ropliai/1/kategorija', 'ReptileController@category')->name('reptile
 Route::get('/pauksciai/1/kategorija', 'BirdController@category')->name('birdCategory');
 Route::get('skelbimai/patvirtinimas', 'BlogController@setConfirms')->name('blogConfirm');
 Route::put('skelbimai/patv/{id}', 'BlogController@confirm');
+Route::get('nustatymai', 'HomeController@edit');
+Route::put('nustatymai/{id}/p', 'HomeController@updateuser');
 
 
 

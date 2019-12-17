@@ -52,7 +52,7 @@ class CatController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
-            'photo' => 'required'
+            'photo' => 'required',
         ]);
 
         $cat = new Cat();
@@ -142,6 +142,6 @@ class CatController extends Controller
         $cat = Cat::find($id);
         $cat->delete();
 
-        return redirect()->back()->with('danger', 'kate buvo panaikinta');
+        return redirect('/kates')->with('danger', 'kate buvo panaikinta');
     }
 }

@@ -49,6 +49,7 @@ class ReptileController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
+            'photo' => 'required',
         ]);
 
         $reptile = new Reptile();
@@ -138,6 +139,6 @@ class ReptileController extends Controller
         $reptile = Reptile::find($id);
         $reptile->delete();
 
-        return redirect()->back()->with('danger', 'roplys buvo panaikintas');
+        return redirect('ropliai')->with('danger', 'roplys buvo panaikintas');
     }
 }
