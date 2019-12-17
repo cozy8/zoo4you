@@ -19,7 +19,7 @@
             <div class="col-md-4">
 
                     <div class="card">
-                            <img class="cardphoto" src="{{Storage::url($bird->photo)}}" alt="" style="width:100%">
+                            <img class="cardphoto" src="{{Storage::url($birder->photo)}}" alt="" style="width:100%">
                             <div class="cardcontainer">
                                 <h5><b>{{$birder->item_name}}</b></h5>
                                 <p>Išmatavimai: {{$birder->dimensions}} </p>
@@ -52,12 +52,6 @@
                                             {!! Form::close() !!}
                                         </div>
 
-                                        <div class="col-md-3">
-                                            <img class="cardcart"src="/images/img/icone/bag.png">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <img class="cardcart"src="/images/img/icone/heart.png">
-                                        </div>
                                     </div>
                                 </div>
 

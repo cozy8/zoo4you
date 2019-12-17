@@ -85,7 +85,7 @@
                                             @auth()
                                             <div class="col-md-2 rudasfonas sellrow">
 
-                                                {!! Form::open(['action' => 'CartController@store', $bird->id]) !!}
+                                                {!! Form::open(['action' => 'CartController@store', $cat->id]) !!}
 
                                                 {{Form::hidden('user_id', Auth::id())}}
                                                 {{Form::hidden('item', $cat->id)}}
