@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div>
-                                <img class="produktopav" src="/images/img/skelbimai/2.jpg" alt="">
+                                <img class="produktopav" src="{{Storage::url($dog->photo)}}" alt="">
                             </div>
                         </div>
 
@@ -27,7 +27,6 @@
                             </h5>
                             <div class="rudasfonas produktas">
                                 <div class="col-md-12 topatitraukimas ">
-                                    <p class="categorytitle">{{$dog->category}} </p>
                                     <p class="topatitraukimas">{{$dog->description}} </p>
                                 </div>
                             </div>
@@ -42,17 +41,16 @@
                                             <div class="col-md-5 sellrow">
                                                  <p>Išmatavimai: </p>
                                             </div>
+                                            @auth()
                                             <div class="col-md-2 sellrow">
                                                 <p>Kiekis: </p>
                                             </div>
+                                            @endauth
                                     </div>
 
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p>{{$dog->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p>{{$dog->dimensions}} </p> </div>
-
-
-
 
 @auth()
                                             <div class="col-md-2 sellrow">
@@ -63,9 +61,6 @@
                                                 {{Form::hidden('category', 1)}}
 
                                                 <input style="width: 100%;" type="number" name="quantity" min="1" max="5" required>
-
-
-
                                             </div>
 
                                             <div class="col-md-2 rudasfonas  sellrow">
@@ -85,8 +80,20 @@
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p> Kaina: {{$dog->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p> Išmatavimai:{{$dog->dimensions}} </p> </div>
-                                            <div class="col-md-2 rudasfonas sellrow">  <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5"> </div>
-                                            <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
+                                            <div class="col-md-2 rudasfonas sellrow">
+
+                                                {!! Form::open(['action' => 'CartController@store', $dog->id]) !!}
+
+                                                {{Form::hidden('user_id', Auth::id())}}
+                                                {{Form::hidden('item', $dog->id)}}
+                                                {{Form::hidden('category', 1)}}
+
+                                                <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5" required> </div>
+
+                                            <div class="col-md-2 rudasfonas  sellrow">
+                                                <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
+                                                {!! Form::close() !!}
+                                            </div>
                                     </div>
                                 </div>
                         </div>
