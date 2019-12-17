@@ -144,7 +144,7 @@
                         <div class="col-md-3">
                         <a href="">
                             <div class = "skelbimopav">
-                                <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt="">
+                                <img class="skelbimopav" src="{{Storage::url($blog->photo)}}" alt="">
                             </div>
                         </a>
 
@@ -156,6 +156,9 @@
                                     <div class="col-md-8 topatitraukimas ">
                                         <h6> {{$blog->title}} </h6>
                                         <p class="topatitraukimas">{{$blog->description}}</p>
+                                        <div class="topatitraukimas" style = "font-size:20px;">
+                                            <a href="/skelbimai/{{$blog->id}}"> <p>  Peržiūrėti skelbimą... </p> </a>
+                                        </div>
                                     </div>
                                     <div class="col-md-4 topatitraukimas">
                                         <p>{{$blog->created_at}}</p>

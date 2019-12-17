@@ -14,7 +14,7 @@
                                 <div class="col-md-3">
                                     <a href="">
                                         <div class = "skelbimopav">
-                                            <img class="skelbimopav" src="/images/img/skelbimai/2.jpg" alt="">
+                                            <img class="skelbimopav" src="{{Storage::url($blog->photo)}}" alt="">
                                         </div>
                                     </a>
 

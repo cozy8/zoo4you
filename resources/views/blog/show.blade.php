@@ -7,22 +7,27 @@
         <div class="row justify-content-center">
             <div class="col-md-10 topatitraukimasnav">
 
+            <div class="alignright">
+                    @auth()
+                    @if(Auth::user()->admin == 1)
+                        {{Form::open(['method'  => 'DELETE', 'action' => ['BlogController@destroy', $blog->id]])}}
+                        {{Form::button('Trinti skelbimą', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
+                        {!! Form::close() !!}
+                    @endif
+                    @endauth
+                </div>
+
                 <div class= "rudasfonas">
                     <div class="topatitraukimas">
                         <h2> {{$blog->title}} </h2>
                     </div>
                 </div>
-                @auth()
-                    @if(Auth::user()->admin == 1)
-                        <a class="btn btn-primary" href="/sunys/{{$blog->id}}/edit">Keisti prekę</a>
-                    @endif
-                @endauth
 
                 <div class="topatitraukimasdidelis">
                     <div class="row">
                         <div class="col-md-6">
                             <div>
-                                <img class="produktopav" src="/images/img/skelbimai/2.jpg" alt="">
+                                <img class="produktopav" src="{{Storage::url($blog->photo)}}" alt="">
                             </div>
                         </div>
 
@@ -41,12 +46,8 @@
                                 <div class="desktop">
                                     <div class="row">
                                         <div class="col-md-2 sellrow">
-                                            <p>Kaina: </p>
+                                            <p>Kaina: {{$blog->price}} </p>
                                         </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-2 rudasfonas sellrow"> <p>{{$blog->price}} </p> </div>
                                     </div>
                                 </div>
 
@@ -59,6 +60,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

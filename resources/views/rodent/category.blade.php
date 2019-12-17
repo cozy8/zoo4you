@@ -52,12 +52,6 @@
                                             {!! Form::close() !!}
                                         </div>
 
-                                        <div class="col-md-3">
-                                            <img class="cardcart"src="/images/img/icone/bag.png">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <img class="cardcart"src="/images/img/icone/heart.png">
-                                        </div>
                                     </div>
                                 </div>
 

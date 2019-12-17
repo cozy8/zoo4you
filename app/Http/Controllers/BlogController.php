@@ -48,13 +48,22 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
+        $this->validate($request, [
+            'title' => 'required',
+            'category' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'photo' => 'required',
+        ]);
+
         $blog = new Blog();
         $blog->title = $request->input('title');
         $blog->category = $request->input('category');
         $blog->description = $request->input('description');
         $blog->location = $request->input('location');
         $blog->price = $request->input('price');
-        $blog->photo = '.!.';
+        $blog->photo = $request->file('photo')->store('public/blogs');
 
         $blog->save();
 
@@ -105,7 +114,7 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $blog = Dog::find($id);
+        $blog = Blog::find($id);
 
         $blog->delete();
 
