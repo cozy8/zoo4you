@@ -61,7 +61,7 @@ class FishController extends Controller
         $fish->dimensions = $request->input('dimension');
         $fish->quantity = $request->input('quantity');
         $fish->price = $request->input('price');
-        $fish->photo = '.!.';
+        $fish->photo = $request->file('photo')->store('public/fish');
 
         $fish->save();
 
@@ -122,13 +122,12 @@ class FishController extends Controller
 
         $fish = new Fish();
         $fish->item_name = $request->input('title');
-        $fish->category = $request->input('category');
         $fish->description = $request->input('description');
         $fish->dimensions = $request->input('dimension');
         $fish->quantity = $request->input('quantity');
         $fish->price = $request->input('price');
 
-        $fish->save();
+        $fish->update();
 
         return redirect('zuvys')->with('success', 'Prekė pakeista');
     }
