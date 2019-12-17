@@ -124,7 +124,6 @@ class DogController extends Controller
         $dog->dimensions = $request->input('dimension');
         $dog->quantity = $request->input('quantity');
         $dog->price = $request->input('price');
-        $dog->photo = $request->file('photo')->store('public/dogs');
 
         $dog->update();
 

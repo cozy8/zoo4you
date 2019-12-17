@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div>
-                                <img class="produktopav" src="/images/img/skelbimai/2.jpg" alt="">
+                                <img class="produktopav" src="{{Storage::url($reptile->photo)}}" alt="">
                             </div>
                         </div>
 
