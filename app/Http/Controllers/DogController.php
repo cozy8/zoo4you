@@ -51,6 +51,7 @@ class DogController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
+            'photo' => 'required',
         ]);
 
         $dog = new Dog();

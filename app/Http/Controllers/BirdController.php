@@ -50,6 +50,7 @@ class BirdController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
+            'photo' => 'required',
         ]);
 
         $bird = new Bird();
@@ -139,6 +140,6 @@ class BirdController extends Controller
         $bird = Bird::find($id);
         $bird->delete();
 
-        return redirect()->back()->with('danger', 'paukstis buvo panaikintas');
+        return redirect('pauksciai')->with('danger', 'paukstis buvo panaikintas');
     }
 }

@@ -52,6 +52,7 @@ class FishController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
+            'photo' => 'required',
         ]);
 
         $fish = new Fish();
@@ -143,6 +144,6 @@ class FishController extends Controller
         $fish = Fish::find($id);
         $fish->delete();
 
-        return redirect()->back()->with('danger', 'zuvis buvo panaikinta');
+        return redirect('zuvys')->with('danger', 'zuvis buvo panaikinta');
     }
 }

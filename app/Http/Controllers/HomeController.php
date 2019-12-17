@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Blog;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -28,4 +30,26 @@ class HomeController extends Controller
 
         return view('home')->with('blogs', $blogs);
     }
+
+    public function edit()
+    {
+        $user = Auth::user();
+
+        return view('auth.options')->with('user', $user);
+    }
+
+
+    public function updateuser(Request $request, $id)
+    {
+        $user = User::find($id);
+
+        $user->name = $request->name;
+        $user->location = $request->location;
+
+        $user->update();
+
+        return redirect('/')->with('success', 'Nustatymai pakeisti');
+    }
+
+
 }

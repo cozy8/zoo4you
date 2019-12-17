@@ -93,7 +93,7 @@
                                         Patikę
                                     </a>
 
-                                    <a class="dropdown-item" href="/">
+                                    <a class="dropdown-item" href="/nustatymai">
                                         Nustatymai
                                     </a>
 

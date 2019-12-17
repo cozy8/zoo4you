@@ -105,11 +105,11 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        $blog = Dog::find($id);
+        $blog = Blog::find($id);
 
         $blog->delete();
 
-        return redirect('skelbimai')->with('danger', 'skelbimas panaikintas');
+        return redirect('skelbimai')->with('error', 'skelbimas panaikintas');
     }
 
 

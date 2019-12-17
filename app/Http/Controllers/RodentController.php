@@ -52,6 +52,7 @@ class RodentController extends Controller
             'dimension' => 'required',
             'price' => 'required',
             'quantity' => 'required',
+            'photo' => 'required',
         ]);
 
         $rodent = new Rodent();
@@ -141,6 +142,6 @@ class RodentController extends Controller
         $rodent = Rodent::find($id);
         $rodent->delete();
 
-        return redirect()->back()->with('danger', 'peliukas buvo panaikintas');
+        return redirect('peles')->with('danger', 'peliukas buvo panaikintas');
     }
 }
