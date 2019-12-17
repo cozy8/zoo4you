@@ -31,17 +31,17 @@ class LikeController extends Controller
 
         foreach ($like as $item){
             if($item->item_category == 1){
-                $itemdetails = Dog::find($id);
+                $itemdetails = Dog::where('id', $item->item_id)->get();
             }elseif ($item->item_category == 2){
-                $itemdetails = Cat::find($id);
+                $itemdetails = Cat::where('id', $item->item_id)->get();
             }elseif ($item->item_category == 3){
-                $itemdetails = Rodent::find($id);
+                $itemdetails = Rodent::where('id', $item->item_id)->get();
             }elseif ($item->item_category == 4){
-                $itemdetails = Fish::find($id);
+                $itemdetails = Fish::where('id', $item->item_id)->get();
             }elseif ($item->item_category == 5){
-                $itemdetails = Reptile::find($id);
+                $itemdetails = Reptile::where('id', $item->item_id)->get();
             }elseif ($item->item_category == 6){
-                $itemdetails = Bird::find($id);
+                $itemdetails = Bird::where('id', $item->item_id)->get();
             }
             $itemdetails->like_id = $item->id;
             array_push($items, $itemdetails);

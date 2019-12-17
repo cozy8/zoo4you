@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::latest()->take(5)->get();
+        $blogs = Blog::latest()->where('confirmation', 1)->take(5)->get();
 
         return view('home')->with('blogs', $blogs);
     }
