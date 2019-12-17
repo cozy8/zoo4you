@@ -25,7 +25,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::latest()->take(3)->get();
+        $blogs = Blog::latest()->where('confirmation', 1)->take(3)->get();
 
         return view('blog.index')->with('blogs', $blogs);
     }
