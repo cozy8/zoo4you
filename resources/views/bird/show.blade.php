@@ -42,16 +42,38 @@
                                             <div class="col-md-5 sellrow">
                                                  <p>Išmatavimai: </p>
                                             </div>
+                                            @auth()
                                             <div class="col-md-2 sellrow">
                                                 <p>Kiekis: </p>
                                             </div>
+                                            @endauth
                                     </div>
 
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p>{{$bird->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p>{{$bird->dimensions}} </p> </div>
-                                            <div class="col-md-2 sellrow"> <input style="width: 100%;" type="number" name="quantity" min="1" max="5"> </div>
-                                            <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
+
+@auth()
+                                            <div class="col-md-2 sellrow">
+                                                {!! Form::open(['action' => 'CartController@store', $bird->id]) !!}
+
+                                                {{Form::hidden('user_id', Auth::id())}}
+                                                {{Form::hidden('item', $bird->id)}}
+                                                {{Form::hidden('category', 6)}}
+
+                                                <input style="width: 100%;" type="number" name="quantity" min="1" max="5" required>
+                                            </div>
+
+                                            <div class="col-md-2 rudasfonas  sellrow">
+
+                                                <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
+
+                                                {!! Form::close() !!}
+
+                                            </div>
+@endauth
+
+
                                     </div>
                                 </div>
 
@@ -59,8 +81,24 @@
                                     <div class="row">
                                             <div class="col-md-2 rudasfonas sellrow"> <p> Kaina: {{$bird->price}} </p> </div>
                                             <div class="col-md-5 rudasfonas  sellrow"> <p> Išmatavimai:{{$bird->dimensions}} </p> </div>
-                                            <div class="col-md-2 rudasfonas sellrow">  <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5"> </div>
-                                            <div class="col-md-2 rudasfonas  sellrow"> <img class="cartimg"src="/images/img/icone/bag.png"></div>
+
+                                            @auth()
+                                            <div class="col-md-2 rudasfonas sellrow">
+
+                                                {!! Form::open(['action' => 'CartController@store', $bird->id]) !!}
+
+                                                {{Form::hidden('user_id', Auth::id())}}
+                                                {{Form::hidden('item', $bird->id)}}
+                                                {{Form::hidden('category', 6)}}
+
+                                                <input style="width: 100%;"  placeholder="Kiekis" type="number" name="quantity" min="1" max="5" required> </div>
+                                                @endauth
+
+
+                                            <div class="col-md-2 rudasfonas  sellrow">
+                                                <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
+                                                {!! Form::close() !!}
+                                            </div>
                                     </div>
                                 </div>
 

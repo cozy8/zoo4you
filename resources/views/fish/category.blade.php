@@ -28,6 +28,30 @@
                                 <a href="/zuvys/{{$fisher->id}}"> <p>  plačiau apie produktą... </p> </a>
                                 <div class="">
                                     <div class = "row topatitraukimasdidelis justify-content-center">
+
+                                    <div class="col-md-3">
+                                            {!! Form::open(['action' => 'CartController@store', $fisher->id]) !!}
+
+                                            {{Form::hidden('user_id', Auth::id())}}
+                                            {{Form::hidden('item', $fisher->id)}}
+                                            {{Form::hidden('category', 4)}}
+                                            {{Form::hidden('quantity', 1)}}
+                                            <input type="image" class="cartimg" name="submit" src="/images/img/icone/bag.png" alt="Submit"/>
+
+                                            {!! Form::close() !!}
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            {!! Form::open(['action' => 'LikeController@store', $fisher->id]) !!}
+
+                                            {{Form::hidden('user_id', Auth::id())}}
+                                            {{Form::hidden('item', $fisher->id)}}
+                                            {{Form::hidden('category', 4)}}
+                                            <input type="image" class="cartimg" name="submit" src="/images/img/icone/heart.png" alt="Submit"/>
+
+                                            {!! Form::close() !!}
+                                        </div>
+
                                         <div class="col-md-3">
                                             <img class="cardcart"src="/images/img/icone/bag.png">
                                         </div>
